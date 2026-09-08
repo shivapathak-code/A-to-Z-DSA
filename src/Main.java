@@ -1,13 +1,38 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public class Main {
+        static class Solution {
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+            public boolean isHeap(int[] nums) {
+
+                int n = nums.length;
+
+                for (int i = 0; i < n / 2; i++) {
+
+                    int left = 2 * i + 1;
+                    int right = 2 * i + 2;
+
+                    if (left < n && nums[i] > nums[left]) {
+                        return false;
+                    }
+
+                    if (right < n && nums[i] > nums[right]) {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+        }
+
+        public static void main(String[] args) {
+
+            int arr[] = {10, 20, 30, 25, 15};
+
+            Solution s = new Solution();
+
+            boolean ans = s.isHeap(arr);
+
+            System.out.print(ans);
+        }
     }
-}
+
+
