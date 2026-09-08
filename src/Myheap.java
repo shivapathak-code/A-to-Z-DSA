@@ -37,6 +37,16 @@ public class Myheap {
         }
 
     }
+    public int[] heapSort()
+    {
+        buildheap();
+        int size = heapsize;
+        for(int i = 0 ; i< size;i++)
+        {
+            extractMaxAndStore();
+        }
+        return heap;
+    }
     public void buildheap()
     {
         // leaf node start from {n/2-1 to n-1}
@@ -46,6 +56,19 @@ public class Myheap {
         {
             heapify(i);
         }
+    }
+     public void extractMaxAndStore()
+    {
+        if(heapsize == 0)
+        {
+            System.out.println("Heap is empty");
+        }
+        int max = heap[0];
+        heap[0] = heap[heapsize-1];
+        heap[heapsize-1] = max;
+        heapsize--;
+        heapify(0);
+        return;
     }
     public int extractMax()
     {
@@ -66,12 +89,22 @@ public class Myheap {
             System.out.print("wrong answer");
         }
         heap[index] = value;
-        while(index>0 && heap[index]>heap[(int)(Math.ceil(index/2.0)-1)])
+        while(index>0 && heap[index]>heap[(index-1)/2])
         {
-            swap(index ,(int)(Math.ceil(index/2.0)-1) );
-            index = (int)(Math.ceil(index/2.0)-1);
+            swap(index ,(index-1)/2 );
+            index = (index-1)/2;
         }
     }
+    public void decreseKey(int index , int value)
+    {
+        if(index<0 || index>=heapsize || heap[index]<= value)
+        {
+            System.out.print("wrong answer");
+        }
+        heap[index] = value;
+        heapify(index);
+    }
+
     public void printTree()
     {
         for(int i = 0;i<heapsize;i++){
@@ -84,11 +117,27 @@ public class Myheap {
         heap.buildheap();
         heap.printTree();
         System.out.println();
-        System.out.println(heap.extractMax());
-        heap.printTree();
+        int ans[] = heap.heapSort();
+        for(int i = 0;i<ans.length;i++){
+            System.out.print(ans[i] + " ");
+        }
+        System.out.println();
+
+        for(int i = ans.length-1;i>=0;i--){
+            System.out.print(ans[i] + " ");
+        }
+
+//        System.out.println();
+//      System.out.println(heap.extractMax());
+//        heap.printTree();
 //        System.out.println();
 //        heap.increseKey(4,15);
 //        heap.printTree();
+//        System.out.println();
+//        heap.decreseKey(0 ,4);
+//        heap.printTree();
+//
+//
         }
 }
 
