@@ -1,0 +1,169 @@
+import java.net.SocketOption;
+
+public class DSAAtoZproblems {
+//    public static void main(String[] args)   //Neon Number;
+//    {
+//        int n = 9;
+//        int originalnum = n;
+//        int squareOfno = n*n;
+//        int sum = 0;
+//
+//        while(squareOfno>0){
+//            int d = squareOfno%10;
+//            sum = sum+d;
+//            squareOfno = squareOfno/10;
+//        }
+//        if(sum == originalnum)
+//        {
+//            System.out.println("Neon number");
+//        }
+//        else {
+//            System.out.println("Not Neon number");
+//        }
+//    }
+
+//    public static void main(String[] args)   //Duck Number;
+//    {
+//        int n = 1023;
+//            while (n > 0) {
+//                int d = n % 10;
+//                if (d == 0) {
+//                    System.out.println("Duck number");
+//                    break;
+//                }
+//
+//                n = n / 10;
+//            }
+//        }
+//
+//    public static void main(String[] args)  // harshad number
+//    {
+//        int n = 19;
+//        int orginal = n;
+//        int sum = 0;
+//
+//        while(n>0)
+//        {
+//            int d = n%10;
+//            sum+=d;
+//            n = n/10;
+//        }
+//        if(orginal%sum == 0)
+//        {
+//            System.out.println("Harshed Number");
+//        }
+//        else
+//        {
+//            System.out.println(" Not Harshed Number");
+//        }
+//    }
+
+//    public static void main(String[] args)  // Swap first and last number
+//    {
+//        int n = 1234;
+//        int last = n%10;
+//
+//        int temp = n;
+//        int digit = 0;
+//
+//        while(temp != 0)
+//        {
+//            digit++;
+//            temp = temp/10;
+//        }
+////
+//        int value = (int)Math.pow(10 , digit-1);
+//        int first = n/value;
+//
+//        int mid = (n%value)/10;
+//
+//        int result = last*value+mid*10+first;
+//        System.out.println(result);
+//
+//    }
+
+//public static void main(String[] args)  // largest digit
+//{
+//    int n = 1274;
+//    int largest = -1;
+//
+//    while(n>0)
+//    {
+//        int d = n%10;
+//        if(d > largest)
+//        {
+//            largest = d;
+//        }
+//        n = n/10;
+//    }
+//    System.out.println(largest);
+//
+//}
+
+//    public static void main(String[] args)  // Smallest digit
+//    {
+//        int n = 1274;
+//        int smallest = Integer.MAX_VALUE;
+//
+//        while(n>0)
+//        {
+//            int d = n%10;
+//            if(d < smallest)
+//            {
+//                smallest = d;
+//            }
+//            n = n/10;
+//        }
+//        System.out.println(smallest);
+//
+//    }
+
+//public static void main(String[] args)  // remove all zero from number
+//{
+//    int n = 102030;
+//    int rev = 0;
+//
+//    while(n>0)
+//    {
+//        int d = n%10;
+//        if(d != 0)
+//        {
+//            rev = rev*10+d;
+//        }
+//        n  = n/10;
+//    }
+//    int revagain = 0;
+//    while(rev>0)
+//    {
+//        int d = rev%10;
+//        revagain = revagain*10+d;
+//
+//        rev = rev/10;
+//    }
+//    System.out.println(revagain);
+//
+//}
+
+//public static void main(String[] args)  // remove all zero from number
+//{
+//    int n = 7;
+//    if(n != 1)
+//    {
+//        if(n % n == 0)
+//        {
+//            System.out.println("num is prime");
+//        }
+//    }
+//    else
+//    {
+//        System.out.println("enter a valid number");
+//    }
+//
+//}
+
+
+
+
+
+   }
+
