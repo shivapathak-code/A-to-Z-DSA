@@ -187,15 +187,32 @@ public class DSAAtoZproblems {
 //
 //    }
 
-    public static void main(String[] args) { // perfect number
-        int n = 28;
+//    public static void main(String[] args) { // perfect number
+//        int n = 28;
+//        int sum = 0;
+//        for(int i = 1;i<n;i++)
+//        {
+//            if(n % i == 0)
+//            {
+//                sum+=i;
+//            }
+//        }
+//        System.out.println(sum);
+//    }
+
+    public static void main(String[] args) {
+        int n = 145;
         int sum = 0;
-        for(int i = 1;i<n;i++)
+        while(n>0)
         {
-            if(n % i == 0)
+            int d = n%10;
+            int f = 1;
+            for(int i = 1;i<=d;i++)
             {
-                sum+=i;
+                f = f*i;
             }
+            sum+=f;
+            n = n/10;
         }
         System.out.println(sum);
     }
