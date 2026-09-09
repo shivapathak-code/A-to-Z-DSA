@@ -144,22 +144,27 @@ public class DSAAtoZproblems {
 //
 //}
 
-//public static void main(String[] args)  // remove all zero from number
-//{
-//    int n = 7;
-//    if(n != 1)
-//    {
-//        if(n % n == 0)
-//        {
-//            System.out.println("num is prime");
-//        }
-//    }
-//    else
-//    {
-//        System.out.println("enter a valid number");
-//    }
-//
-//}
+public static void main(String[] args)  // remove all zero from number
+{
+    int n = 1;
+    if(n != 1)
+    {
+        for(int i = 2;i<10;i++)
+        {
+            if(n!=i) {
+                if (n % i == 0 && n % n == 0) {
+                    System.out.println(" not  prime digit");
+                    break;
+                }
+            }
+        }
+    }
+    else
+    {
+        System.out.println("enter a valid number");
+    }
+  System.out.print("prime digit");
+}
 
 
 
