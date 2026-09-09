@@ -200,21 +200,57 @@ public class DSAAtoZproblems {
 //        System.out.println(sum);
 //    }
 
+
+//    public static void main(String[] args) { // strong number
+//        int n = 145;
+//        int sum = 0;
+//        while(n>0)
+//        {
+//            int d = n%10;
+//            int f = 1;
+//            for(int i = 1;i<=d;i++)
+//            {
+//                f = f*i;
+//            }
+//            sum+=f;
+//            n = n/10;
+//        }
+//        System.out.println(sum);
+//    }
+
+//    public static void main(String[] args) {
+//        int n = 123;
+//        int orginal = n;
+//        int sum = 0;
+//
+//        while(n>0)
+//        {
+//            int d = n%10;
+//            sum+=d*d*d;
+//            n = n/10;
+//        }
+//        System.out.println(sum);
+//        if(orginal == sum)
+//        {
+//            System.out.println("Armstrong number");
+//        }
+//        else
+//        {
+//            System.out.println(" not Armstrong number");
+//        }
+//    }
+
     public static void main(String[] args) {
-        int n = 145;
-        int sum = 0;
-        while(n>0)
+        int n = 292;
+        int product = 1;
+
+        while(n>1)
         {
             int d = n%10;
-            int f = 1;
-            for(int i = 1;i<=d;i++)
-            {
-                f = f*i;
-            }
-            sum+=f;
+            product*=d;
             n = n/10;
         }
-        System.out.println(sum);
+        System.out.println(product);
     }
 }
 
