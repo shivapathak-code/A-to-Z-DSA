@@ -166,7 +166,9 @@ public class DSAAtoZproblems {
 //  System.out.print("prime digit");
 //}
 
-public static void main(String[] args) { // perfect number
+
+
+public static void main(String[] args) {  // spy number
     int n = 28;
     int sum = 0;
     for(int i = 1;i<n;i++)
@@ -178,8 +180,6 @@ public static void main(String[] args) { // perfect number
     }
     System.out.println(sum);
 }
-
-
 
 
    }
