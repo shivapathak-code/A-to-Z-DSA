@@ -71,7 +71,8 @@ public class DSAAtoZproblems {
 //            digit++;
 //            temp = temp/10;
 //        }
-////
+
+    /// /
 //        int value = (int)Math.pow(10 , digit-1);
 //        int first = n/value;
 //
@@ -165,22 +166,25 @@ public class DSAAtoZproblems {
 //    }
 //  System.out.print("prime digit");
 //}
+    public static void main(String[] args) { // spy number
+        int n = 1124;
+        int sum = 0;
+        int product = 1;
 
-
-
-public static void main(String[] args) {  // spy number
-    int n = 28;
-    int sum = 0;
-    for(int i = 1;i<n;i++)
-    {
-        if(n % i == 0)
-        {
-            sum+=i;
+        while (n > 0) {
+            int d = n % 10;
+            sum += d;
+            product *= d;
+            n = n / 10;
         }
+        System.out.println(sum + " " + product);
+        if (sum == product) {
+            System.out.println("spy number");
+        } else {
+            System.out.println("not spy number");
+        }
+
+
     }
-    System.out.println(sum);
 }
-
-
-   }
 
