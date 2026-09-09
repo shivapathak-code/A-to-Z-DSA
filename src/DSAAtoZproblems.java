@@ -166,25 +166,38 @@ public class DSAAtoZproblems {
 //    }
 //  System.out.print("prime digit");
 //}
-    public static void main(String[] args) { // spy number
-        int n = 1124;
+//    public static void main(String[] args) { // spy number
+//        int n = 1124;
+//        int sum = 0;
+//        int product = 1;
+//
+//        while (n > 0) {
+//            int d = n % 10;
+//            sum += d;
+//            product *= d;
+//            n = n / 10;
+//        }
+//        System.out.println(sum + " " + product);
+//        if (sum == product) {
+//            System.out.println("spy number");
+//        } else {
+//            System.out.println("not spy number");
+//        }
+//
+//
+//    }
+
+    public static void main(String[] args) { // perfect number
+        int n = 28;
         int sum = 0;
-        int product = 1;
-
-        while (n > 0) {
-            int d = n % 10;
-            sum += d;
-            product *= d;
-            n = n / 10;
+        for(int i = 1;i<n;i++)
+        {
+            if(n % i == 0)
+            {
+                sum+=i;
+            }
         }
-        System.out.println(sum + " " + product);
-        if (sum == product) {
-            System.out.println("spy number");
-        } else {
-            System.out.println("not spy number");
-        }
-
-
+        System.out.println(sum);
     }
 }
 
