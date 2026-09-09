@@ -218,7 +218,7 @@ public class DSAAtoZproblems {
 //        System.out.println(sum);
 //    }
 
-//    public static void main(String[] args) {
+//    public static void main(String[] args) { // Armstrong number
 //        int n = 123;
 //        int orginal = n;
 //        int sum = 0;
@@ -240,7 +240,7 @@ public class DSAAtoZproblems {
 //        }
 //    }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {  // product of digit
         int n = 292;
         int product = 1;
 
