@@ -145,7 +145,7 @@ public class DSAAtoZproblems {
 //
 //}
 
-//public static void main(String[] args)  // remove all zero from number
+//public static void main(String[] args)  // Prime  number
 //{
 //    int n = 1;
 //    if(n != 1)
@@ -240,17 +240,115 @@ public class DSAAtoZproblems {
 //        }
 //    }
 
-    public static void main(String[] args) {  // product of digit
-        int n = 292;
-        int product = 1;
+//    public static void main(String[] args) {  // product of digit
+//        int n = 292;
+//        int product = 1;
+//
+//        while(n>1)
+//        {
+//            int d = n%10;
+//            product*=d;
+//            n = n/10;
+//        }
+//        System.out.println(product);
+//    }
 
-        while(n>1)
-        {
-            int d = n%10;
-            product*=d;
-            n = n/10;
+//    public static void main(String[] args) {  // Count Even Digits
+//       int n = 1234;
+//       int countEven = 0;
+//
+//       while(n>0)
+//       {
+//           int d = n%10;
+//           if(d%2 ==0)
+//           {
+//               countEven++;
+//           }
+//           n = n/10;
+//       }
+//       System.out.println(countEven);
+//    }
+
+//    public static void main(String[] args) {  // Count odd Digits
+//        int n = 12347;
+//        int countOdd = 0;
+//
+//        while(n>0)
+//        {
+//            int d = n%10;
+//            if(d%2 !=0)
+//            {
+//                countOdd++;
+//            }
+//            n = n/10;
+//        }
+//        System.out.println(countOdd);
+//    }
+
+//    public static void main(String[] args) {  // Sum of  odd Digits
+//        int n = 12347;
+//        int sum = 0;
+//
+//        while(n>0)
+//        {
+//            int d = n%10;
+//            if(d%2 !=0)
+//            {
+//                sum+=d;
+//            }
+//            n = n/10;
+//        }
+//        System.out.println(sum);
+//    }
+
+//    public static void main(String[] args) {  // Sum of  Even Digits
+//        int n = 12347;
+//        int sum = 0;
+//
+//        while(n>0)
+//        {
+//            int d = n%10;
+//            if(d%2 ==0)
+//            {
+//                sum+=d;
+//            }
+//            n = n/10;
+//        }
+//        System.out.println(sum);
+//    }
+
+    public static void main(String[] args)  // Prime Digits Only
+    {
+      int n = 238;
+      int ans = 0;
+      if(n == 0)
+      {
+          System.out.println("Zero prime number hoga per error a jati hain isliye maine ise return ker deta hu ");
+          return;
+      }
+        if (n != 1) {
+      while(n>0) {
+          int d = n%10;
+
+              for (int i = 2; i < 10; i++) {
+                  if (d != i) {
+                      if (d % i == 0 && d % d == 0) {
+                          System.out.println(" not  prime digit");
+                          ans = 1;
+                          break;
+                      }
+                  }
+
+              }
+          n = n/10;
+
+      }
+        } else {
+            System.out.println("enter a valid number");
         }
-        System.out.println(product);
-    }
+        if(ans == 0) {
+            System.out.print("prime digit");
+        }
+}
 }
 
