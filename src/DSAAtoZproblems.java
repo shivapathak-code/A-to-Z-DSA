@@ -317,38 +317,38 @@ public class DSAAtoZproblems {
 //        System.out.println(sum);
 //    }
 
-    public static void main(String[] args)  // Prime Digits Only
-    {
-      int n = 238;
-      int ans = 0;
-      if(n == 0)
-      {
-          System.out.println("Zero prime number hoga per error a jati hain isliye maine ise return ker deta hu ");
-          return;
-      }
-        if (n != 1) {
-      while(n>0) {
-          int d = n%10;
-
-              for (int i = 2; i < 10; i++) {
-                  if (d != i) {
-                      if (d % i == 0 && d % d == 0) {
-                          System.out.println(" not  prime digit");
-                          ans = 1;
-                          break;
-                      }
-                  }
-
-              }
-          n = n/10;
-
-      }
-        } else {
-            System.out.println("enter a valid number");
-        }
-        if(ans == 0) {
-            System.out.print("prime digit");
-        }
-}
+//    public static void main(String[] args)  // Prime Digits Only
+//    {
+//      int n = 238;
+//      int ans = 0;
+//      if(n == 0)
+//      {
+//          System.out.println("Zero prime number hoga per error a jati hain isliye maine ise return ker deta hu ");
+//          return;
+//      }
+//        if (n != 1) {
+//      while(n>0) {
+//          int d = n%10;
+//
+//              for (int i = 2; i < 10; i++) {
+//                  if (d != i) {
+//                      if (d % i == 0 && d % d == 0) {
+//                          System.out.println(" not  prime digit");
+//                          ans = 1;
+//                          break;
+//                      }
+//                  }
+//
+//              }
+//          n = n/10;
+//
+//      }
+//        } else {
+//            System.out.println("enter a valid number");
+//        }
+//        if(ans == 0) {
+//            System.out.print("prime digit");
+//        }
+//}
 }
 
