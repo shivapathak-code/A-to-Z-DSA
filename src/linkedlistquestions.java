@@ -1,4 +1,4 @@
-public class linkedlistquestions {
+//public class linkedlistquestions {
     // flattern a multi level linkedlist;
 //    public static void main(String[] args)
 //    {
@@ -35,42 +35,42 @@ public class linkedlistquestions {
 //        }
 //        return head;
 //    }
-    public static void main(String[] args)
-    {
-        if(head == null)
-        {
-            return  head;
-        }
-        listnode prev = head;
-        listnode curr = head.next;
-        int i = 1;
-        list<Integer> criticalpoint = new ArrayList<>();
-
-        while(curr != null && curr.next!=null)
-        {
-            if(curr.val > prev.val && curr.val > curr.next.val)
-            {
-                crticalpoint.add(i);
-            }
-            if(curr.val < prev.val && curr.val < curr.next.val)
-            {
-                crticalpoint.add(i);
-            }
-            curr = curr.next;
-            prev = prev.next;
-            i = i+1;
-        }
-        if(criticalpoint.size() < 2)
-        {
-            return new int[]{-1 , -1};
-        }
-        int mindist = Integer.MAX_VALUE;
-        for(int j = 1;j<critical.size();j++)
-        {
-            mindist = Math.min(mindist , criticalpoint.get(j) - criticalpoint.get(j+1));
-        }
-
-        int maxdist = criticalpoint.get(criticalpoint.size()-1) - criticalpoint.get(0);
-        return new int[]{mindist ,maxdist };
-    }
-}
+//    public static void main(String[] args)
+//    {
+//        if(head == null)
+//        {
+//            return  head;
+//        }
+//        listnode prev = head;
+//        listnode curr = head.next;
+//        int i = 1;
+//        list<Integer> criticalpoint = new ArrayList<>();
+//
+//        while(curr != null && curr.next!=null)
+//        {
+//            if(curr.val > prev.val && curr.val > curr.next.val)
+//            {
+//                crticalpoint.add(i);
+//            }
+//            if(curr.val < prev.val && curr.val < curr.next.val)
+//            {
+//                crticalpoint.add(i);
+//            }
+//            curr = curr.next;
+//            prev = prev.next;
+//            i = i+1;
+//        }
+//        if(criticalpoint.size() < 2)
+//        {
+//            return new int[]{-1 , -1};
+//        }
+//        int mindist = Integer.MAX_VALUE;
+//        for(int j = 1;j<critical.size();j++)
+//        {
+//            mindist = Math.min(mindist , criticalpoint.get(j) - criticalpoint.get(j+1));
+//        }
+//
+//        int maxdist = criticalpoint.get(criticalpoint.size()-1) - criticalpoint.get(0);
+//        return new int[]{mindist ,maxdist };
+//    }
+//}
