@@ -381,10 +381,10 @@ public class DSAAtoZproblems {
 
     public static void main(String[] args)
     {
-        int n = 7;
+        int n = 107;
         int digit = n % 10;
 
-        if(n % 7 == 0 && digit == n)
+        if(n % 7 == 0 || digit == 7)
         {
             System.out.println("Buzz number");
         }
