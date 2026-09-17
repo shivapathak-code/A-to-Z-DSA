@@ -394,36 +394,54 @@ public class DSAAtoZproblems {
 //        }
 //    }
 
-    public static void main(String[] args) {  // Disarium number
+//    public static void main(String[] args) {  // Disarium number
+//
+//        int n = 145;
+//        int original = n;
+//        int count = 0;
+//        while (n > 0) {
+//            int d = n % 10;
+//            count++;
+//            n = n / 10;
+//        }
+//        n = original;
+//
+//        int sum = 0;
+//
+//        while (n > 0) {
+//            int d = n % 10;
+//
+//            sum += Math.pow(d, count);
+//
+//            count--;
+//            n = n / 10;
+//        }
+//
+//        System.out.println("Sum = " + sum);
+//
+//        if (sum == original) {
+//            System.out.println("Disarium Number");
+//        } else {
+//            System.out.println("Not a Disarium Number");
+//        }
+//    }
 
-        int n = 145;
-        int original = n;
-        int count = 0;
-        while (n > 0) {
-            int d = n % 10;
-            count++;
-            n = n / 10;
+    public static void main(String[] args) {  // sunny number
+
+        int n = 8;
+        int number = n+1;
+
+        double SqureRoot = Math.sqrt(number);
+
+        if(SqureRoot*SqureRoot == number)
+        {
+            System.out.println("Sunny Number");
         }
-        n = original;
-
-        int sum = 0;
-
-        while (n > 0) {
-            int d = n % 10;
-
-            sum += Math.pow(d, count);
-
-            count--;
-            n = n / 10;
+        else
+        {
+            System.out.println(" Not Sunny Number");
         }
 
-        System.out.println("Sum = " + sum);
-
-        if (sum == original) {
-            System.out.println("Disarium Number");
-        } else {
-            System.out.println("Not a Disarium Number");
-        }
     }
 }
 
