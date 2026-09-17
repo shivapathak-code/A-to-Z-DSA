@@ -95,4 +95,32 @@ public class linkedlistquestions {
             return head;
         }
     }
+
+    public int doubleoflinkedlist(int head)
+    {
+        head = reverse(head);
+        listnode dummy = new listnode(-1);
+        dummy = curr.next;
+        node temp = head;
+        int carry = 0;
+        while(temp != null)
+        {
+            int value = temp.data;
+            int sum = value+value+carry;
+            int digit = sum%10;
+            curr.next = new listnode(digit);
+            curr = curr.next;
+            carry = sum/10;
+            temp = temp.next;
+        }
+        if(temp == null && carry != 0)
+        {
+            curr.next = new listnode(carry);
+        }
+        dummy = dummy.next;
+        head = reverse(head);
+
+        return head;
+
+    }
 }
