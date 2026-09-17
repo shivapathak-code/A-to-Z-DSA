@@ -365,18 +365,33 @@ public class DSAAtoZproblems {
 //        System.out.println(count);
 //    }
 
+//    public static void main(String[] args)
+//    {
+//         int n = 6;
+//         int sum = 0;
+//         for(int i = 1;i<n;i++)
+//         {
+//             if(n % i == 0)
+//             {
+//                 sum+=i;
+//             }
+//         }
+//         System.out.println(sum);
+//    }
+
     public static void main(String[] args)
     {
-         int n = 6;
-         int sum = 0;
-         for(int i = 1;i<n;i++)
-         {
-             if(n % i == 0)
-             {
-                 sum+=i;
-             }
-         }
-         System.out.println(sum);
+        int n = 7;
+        int digit = n % 10;
+
+        if(n % 7 == 0 && digit == n)
+        {
+            System.out.println("Buzz number");
+        }
+        else
+        {
+            System.out.println(" not Buzz number");
+        }
     }
 }
 

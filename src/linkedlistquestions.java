@@ -1,4 +1,4 @@
-public class linkedlistquestions {
+//public class linkedlistquestions {
     // flattern a multi level linkedlist;
 //    public static void main(String[] args)
 //    {
@@ -77,50 +77,50 @@ public class linkedlistquestions {
 
 
     // created a program that have calculate the double a linked represtation integer
-    public static void main(String[] args)
-    {
-        public int reverse(int head)
-        {
-            node prev = null;
-            node curr = head;
-            node temp = head;
-
-            while(temp!=null)
-            {
-                node forward = curr.next;
-                curr.next = prev;
-                prev = curr;
-                curr = forward;
-            }
-            return head;
-        }
-    }
-
-    public int doubleoflinkedlist(int head)
-    {
-        head = reverse(head);
-        listnode dummy = new listnode(-1);
-        dummy = curr.next;
-        node temp = head;
-        int carry = 0;
-        while(temp != null)
-        {
-            int value = temp.data;
-            int sum = value+value+carry;
-            int digit = sum%10;
-            curr.next = new listnode(digit);
-            curr = curr.next;
-            carry = sum/10;
-            temp = temp.next;
-        }
-        if(temp == null && carry != 0)
-        {
-            curr.next = new listnode(carry);
-        }
-        dummy = dummy.next;
-        head = reverse(head);
-
-        return head;
-
-    }
-}
+//    public static void main(String[] args)
+//    {
+//        public int reverse(int head)
+//        {
+//            node prev = null;
+//            node curr = head;
+//            node temp = head;
+//
+//            while(temp!=null)
+//            {
+//                node forward = curr.next;
+//                curr.next = prev;
+//                prev = curr;
+//                curr = forward;
+//            }
+//            return head;
+//        }
+//    }
+//
+//    public int doubleoflinkedlist(int head)
+//    {
+//        head = reverse(head);
+//        listnode dummy = new listnode(-1);
+//        dummy = curr.next;
+//        node temp = head;
+//        int carry = 0;
+//        while(temp != null)
+//        {
+//            int value = temp.data;
+//            int sum = value+value+carry;
+//            int digit = sum%10;
+//            curr.next = new listnode(digit);
+//            curr = curr.next;
+//            carry = sum/10;
+//            temp = temp.next;
+//        }
+//        if(temp == null && carry != 0)
+//        {
+//            curr.next = new listnode(carry);
+//        }
+//        dummy = dummy.next;
+//        head = reverse(head);
+//
+//        return head;
+//
+//    }
+//}
