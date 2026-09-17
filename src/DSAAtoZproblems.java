@@ -379,18 +379,50 @@ public class DSAAtoZproblems {
 //         System.out.println(sum);
 //    }
 
-    public static void main(String[] args)
-    {
-        int n = 107;
-        int digit = n % 10;
+//    public static void main(String[] args) // Buzz Number
+//    {
+//        int n = 107;
+//        int digit = n % 10;
+//
+//        if(n % 7 == 0 || digit == 7)
+//        {
+//            System.out.println("Buzz number");
+//        }
+//        else
+//        {
+//            System.out.println(" not Buzz number");
+//        }
+//    }
 
-        if(n % 7 == 0 || digit == 7)
-        {
-            System.out.println("Buzz number");
+    public static void main(String[] args) {  // Disarium number
+
+        int n = 145;
+        int original = n;
+        int count = 0;
+        while (n > 0) {
+            int d = n % 10;
+            count++;
+            n = n / 10;
         }
-        else
-        {
-            System.out.println(" not Buzz number");
+        n = original;
+
+        int sum = 0;
+
+        while (n > 0) {
+            int d = n % 10;
+
+            sum += Math.pow(d, count);
+
+            count--;
+            n = n / 10;
+        }
+
+        System.out.println("Sum = " + sum);
+
+        if (sum == original) {
+            System.out.println("Disarium Number");
+        } else {
+            System.out.println("Not a Disarium Number");
         }
     }
 }
