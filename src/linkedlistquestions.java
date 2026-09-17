@@ -1,4 +1,4 @@
-//public class linkedlistquestions {
+public class linkedlistquestions {
     // flattern a multi level linkedlist;
 //    public static void main(String[] args)
 //    {
@@ -73,4 +73,26 @@
 //        int maxdist = criticalpoint.get(criticalpoint.size()-1) - criticalpoint.get(0);
 //        return new int[]{mindist ,maxdist };
 //    }
-//}
+
+
+
+    // created a program that have calculate the double a linked represtation integer
+    public static void main(String[] args)
+    {
+        public int reverse(int head)
+        {
+            node prev = null;
+            node curr = head;
+            node temp = head;
+
+            while(temp!=null)
+            {
+                node forward = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = forward;
+            }
+            return head;
+        }
+    }
+}
