@@ -426,23 +426,49 @@ public class DSAAtoZproblems {
 //        }
 //    }
 
-    public static void main(String[] args) {  // sunny number
+//    public static void main(String[] args) {  // sunny number
+//
+//        int n = 8;
+//        int number = n+1;
+//
+//        double SqureRoot = Math.sqrt(number);
+//
+//        if(SqureRoot*SqureRoot == number)
+//        {
+//            System.out.println("Sunny Number");
+//        }
+//        else
+//        {
+//            System.out.println(" Not Sunny Number");
+//        }
+//
+//    }
 
-        int n = 8;
-        int number = n+1;
+    public static void main(String[] args) { // happy number;
 
-        double SqureRoot = Math.sqrt(number);
+        int n = 19;
+        int original = n;
 
-        if(SqureRoot*SqureRoot == number)
-        {
-            System.out.println("Sunny Number");
+        while (n != 1 && n != 4) {
+
+            int sum = 0;
+
+            while (n > 0) {
+                int d = n % 10;
+                sum += d * d;
+                n = n / 10;
+            }
+
+            n = sum;
         }
-        else
-        {
-            System.out.println(" Not Sunny Number");
-        }
 
+        if (n == 1) {
+            System.out.println("Happy Number");
+        } else {
+            System.out.println("Not a Happy Number");
+        }
     }
+
 }
 
 
