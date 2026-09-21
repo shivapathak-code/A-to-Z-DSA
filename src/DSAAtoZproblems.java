@@ -444,28 +444,53 @@ public class DSAAtoZproblems {
 //
 //    }
 
-    public static void main(String[] args) { // happy number;
+//    public static void main(String[] args) { // happy number;
+//
+//        int n = 19;
+//        int original = n;
+//
+//        while (n != 1 && n != 4) {
+//
+//            int sum = 0;
+//
+//            while (n > 0) {
+//                int d = n % 10;
+//                sum += d * d;
+//                n = n / 10;
+//            }
+//
+//            n = sum;
+//        }
+//
+//        if (n == 1) {
+//            System.out.println("Happy Number");
+//        } else {
+//            System.out.println("Not a Happy Number");
+//        }
+//    }
 
-        int n = 19;
-        int original = n;
-
-        while (n != 1 && n != 4) {
-
-            int sum = 0;
-
-            while (n > 0) {
-                int d = n % 10;
-                sum += d * d;
-                n = n / 10;
+    public static void main(String[] args) // Peterson Number
+    {
+        int n = 145;
+        int org = n;
+        int sum = 0;
+        while(n>0)
+        {
+            int d = n%10;
+            int f = 1;
+            for(int i = 1;i<=d;i++)
+            {
+                f = f*i;
             }
+            sum+=f;
 
-            n = sum;
+            n = n/10;
         }
-
-        if (n == 1) {
-            System.out.println("Happy Number");
-        } else {
-            System.out.println("Not a Happy Number");
+        if(org == sum) {
+            System.out.println("Peterson Number");
+        }
+        else {
+            System.out.println(" not Peterson Number");
         }
     }
 
