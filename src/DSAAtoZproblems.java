@@ -495,21 +495,44 @@ public class DSAAtoZproblems {
 //        }
 //    }
 
-    public static void main(String[] args) // factorial number;
-    {
-        System.out.println("enter a number");
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        int fact = 1;
-
-        for(int i = 1;i<=n;i++)
-        {
-            fact*=i;
-        }
-        System.out.println("your factorial that you given the number -> "+ fact);
-    }
-
+//    public static void main(String[] args) // factorial number;
+//    {
+//        System.out.println("enter a number");
+//        Scanner sc = new Scanner(System.in);
+//        int n = sc.nextInt();
+//
+//        int fact = 1;
+//
+//        for(int i = 1;i<=n;i++)
+//        {
+//            fact*=i;
+//        }
+//        System.out.println("your factorial that you given the number -> "+ fact);
+//    }
+//    public static void main(String[] args) { // magic number;
+//
+//        int n = 19;
+//        int original = n;
+//
+//        while (n != 1) {
+//
+//            int sum = 0;
+//
+//            while (n > 0) {
+//                int d = n % 10;
+//                sum += d * d;
+//                n = n / 10;
+//
+//            }
+//            n = sum;
+//        }
+//
+//        if (n == 1) {
+//            System.out.println("magic Number");
+//        } else {
+//            System.out.println("Not a magic Number");
+//        }
+//    }
 }
 
 
