@@ -1,4 +1,5 @@
 import java.net.SocketOption;
+import java.util.Scanner;
 
 public class DSAAtoZproblems {
 //    public static void main(String[] args)   //Neon Number;
@@ -469,29 +470,44 @@ public class DSAAtoZproblems {
 //        }
 //    }
 
-    public static void main(String[] args) // Peterson Number
-    {
-        int n = 145;
-        int org = n;
-        int sum = 0;
-        while(n>0)
-        {
-            int d = n%10;
-            int f = 1;
-            for(int i = 1;i<=d;i++)
-            {
-                f = f*i;
-            }
-            sum+=f;
+//    public static void main(String[] args) // Peterson Number
+//    {
+//        int n = 145;
+//        int org = n;
+//        int sum = 0;
+//        while(n>0)
+//        {
+//            int d = n%10;
+//            int f = 1;
+//            for(int i = 1;i<=d;i++)
+//            {
+//                f = f*i;
+//            }
+//            sum+=f;
+//
+//            n = n/10;
+//        }
+//        if(org == sum) {
+//            System.out.println("Peterson Number");
+//        }
+//        else {
+//            System.out.println(" not Peterson Number");
+//        }
+//    }
 
-            n = n/10;
+    public static void main(String[] args) // factorial number;
+    {
+        System.out.println("enter a number");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int fact = 1;
+
+        for(int i = 1;i<=n;i++)
+        {
+            fact*=i;
         }
-        if(org == sum) {
-            System.out.println("Peterson Number");
-        }
-        else {
-            System.out.println(" not Peterson Number");
-        }
+        System.out.println("your factorial that you given the number -> "+ fact);
     }
 
 }
