@@ -534,22 +534,37 @@ public class DSAAtoZproblems {
 //        }
 //    }
 
-    public static void main(String[] args)  // Fibonacci Series
-    {
-        int n = 6;
-        int a = 0;
-        int b = 1;
-        System.out.println(a);
-        System.out.println(b);
-        for(int i = 1;i<n;i++)
-        {
-            int c = a+b;
-            a = b;
-            b = c;
+//    public static void main(String[] args)  // Fibonacci Series
+//    {
+//        int n = 6;
+//        int a = 0;
+//        int b = 1;
+//        System.out.println(a);
+//        System.out.println(b);
+//        for(int i = 1;i<n;i++)
+//        {
+//            int c = a+b;
+//            a = b;
+//            b = c;
+//
+//            System.out.println(c);
+//        }
+//    }
 
-            System.out.println(c);
-        }
-    }
+//    public static void main(String[] args)  // calculate power without built in function
+//    {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("enter base");
+//        int base = sc.nextInt();
+//        System.out.println("enter pow");
+//        int pow = sc.nextInt();
+//        int result = 1;
+//        for(int i = 1;i<=pow;i++)
+//        {
+//            result = result*base;
+//        }
+//        System.out.println(result);
+//    }
 }
 
 
