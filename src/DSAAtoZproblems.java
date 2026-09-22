@@ -1,6 +1,7 @@
 import java.net.SocketOption;
 import java.util.Scanner;
 
+// Basic math of dsa;
 public class DSAAtoZproblems {
 //    public static void main(String[] args)   //Neon Number;
 //    {
@@ -565,6 +566,26 @@ public class DSAAtoZproblems {
 //        }
 //        System.out.println(result);
 //    }
-}
+
+    public static void main(String[] args) {
+            int n = 15;
+            int count = 0;
+            if (n == 0) {
+                System.out.println("zero");
+            }
+
+            while (n > 0) {
+                int d = n % 10;
+                if (d % 2 != 0) {
+                    count++;
+                }
+                n = n / 10;
+            }
+
+            System.out.println(count);
+        }
+
+    }
+
 
 
