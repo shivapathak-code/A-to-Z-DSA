@@ -631,7 +631,28 @@ public class DSAAtoZproblems {
 //            }
 //            return count;
 //        }
+    public static void main(String[] args)
+    {
+        int n1 = 4;
+        int n2 = 0;
+        int ans = 0;
+        if(n1 == 0 || n2 == 0)
+        {
+            System.out.println("zero");
+            return;
+        }
+
+        for(int i = 1;i<=n1*n2; i++)
+        {
+            if(i % n1 == 0 && i % n2 == 0)
+            {
+                ans = i;
+                break;
+            }
+        }
+        System.out.println(ans);
     }
+}
 
 
 
