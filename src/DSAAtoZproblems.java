@@ -587,25 +587,52 @@ public class DSAAtoZproblems {
 
 
 
-    public static void main(String[] args){
-            int n = 99;
-            int largest = Integer.MIN_VALUE;
-            if(n == 0)
-            {
-                System.out.println("zero");
-            }
-            while(n>0)
-            {
-                int d = n%10;
-                if(d>largest)
-                {
-                    largest = d;
-                }
-                n = n/10;
-            }
-        System.out.println(largest);
-        }
+//    public static void main(String[] args){
+//            int n = 99;
+//            int largest = Integer.MIN_VALUE;
+//            if(n == 0)
+//            {
+//                System.out.println("zero");
+//            }
+//            while(n>0)
+//            {
+//                int d = n%10;
+//                if(d>largest)
+//                {
+//                    largest = d;
+//                }
+//                n = n/10;
+//            }
+//        System.out.println(largest);
+//        }
+    // count prime digits;
+//        public int primeUptoN(int n) {
+//            if(n == 0)
+//            {
+//                return 0;
+//            }
+//            int count  =  0;
+//
+//            for(int i = 2;i<=n;i++)
+//            {
+//                boolean prime = true;
+//                for(int j = 2; j*j<= i;j++)
+//                {
+//                    if(i % j == 0)
+//                    {
+//                        prime = false;
+//                        break;
+//                    }
+//                }
+//                if(prime)
+//                {
+//                    count++;
+//                }
+//            }
+//            return count;
+//        }
     }
+
 
 
 
