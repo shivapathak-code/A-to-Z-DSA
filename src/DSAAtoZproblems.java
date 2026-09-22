@@ -567,25 +567,48 @@ public class DSAAtoZproblems {
 //        System.out.println(result);
 //    }
 
-    public static void main(String[] args) {
-            int n = 15;
-            int count = 0;
-            if (n == 0) {
+//    public static void main(String[] args) {
+//            int n = 15;
+//            int count = 0;
+//            if (n == 0) {
+//                System.out.println("zero");
+//            }
+//
+//            while (n > 0) {
+//                int d = n % 10;
+//                if (d % 2 != 0) {
+//                    count++;
+//                }
+//                n = n / 10;
+//            }
+//
+//            System.out.println(count);
+//        }
+
+
+
+    public static void main(String[] args){
+            int n = 99;
+            int largest = Integer.MIN_VALUE;
+            if(n == 0)
+            {
                 System.out.println("zero");
             }
-
-            while (n > 0) {
-                int d = n % 10;
-                if (d % 2 != 0) {
-                    count++;
+            while(n>0)
+            {
+                int d = n%10;
+                if(d>largest)
+                {
+                    largest = d;
                 }
-                n = n / 10;
+                n = n/10;
             }
-
-            System.out.println(count);
+        System.out.println(largest);
         }
-
     }
+
+
+
 
 
 
