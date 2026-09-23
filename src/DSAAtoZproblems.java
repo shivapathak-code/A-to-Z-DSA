@@ -675,16 +675,41 @@ public class DSAAtoZproblems {
 //        }
 //        System.out.println(count);
 //    }
+//    public static void main(String[] args)
+//    {
+//        HashMap<Integer , Integer> freq = new HashMap<>();
+//        int arr[] = {1,2,3,2,3,7,4,3,7,3,3,2,2,1,1,1,7};
+//
+//        for(int num:arr)
+//        {
+//             freq.put(num, freq.getOrDefault(num, 0) + 1);
+//        }
+//        System.out.println(freq);
+//    }
+
     public static void main(String[] args)
     {
         HashMap<Integer , Integer> freq = new HashMap<>();
         int arr[] = {1,2,3,2,3,7,4,3,7,3,3,2,2,1,1,1,7};
-        
+
         for(int num:arr)
         {
-             freq.put(num, freq.getOrDefault(num, 0) + 1);
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
+        int maxfreq = 0;
+        int minfreq = Integer.MAX_VALUE;
+
+        for(int ans : freq.values())
+        {
+            maxfreq = Math.max(maxfreq , ans);
+             minfreq = Math.min(minfreq , ans);
+        }
+
         System.out.println(freq);
+        System.out.println(maxfreq);
+        System.out.println(minfreq);
+        int sum = maxfreq+minfreq;
+        System.out.println(sum);
     }
 }
 
