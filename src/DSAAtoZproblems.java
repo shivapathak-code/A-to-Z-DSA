@@ -631,26 +631,48 @@ public class DSAAtoZproblems {
 //            }
 //            return count;
 //        }
+//    public static void main(String[] args)
+//    {
+//        int n1 = 4;
+//        int n2 = 0;
+//        int ans = 0;
+//        if(n1 == 0 || n2 == 0)
+//        {
+//            System.out.println("zero");
+//            return;
+//        }
+//
+//        for(int i = 1;i<=n1*n2; i++)
+//        {
+//            if(i % n1 == 0 && i % n2 == 0)
+//            {
+//                ans = i;
+//                break;
+//            }
+//        }
+//        System.out.println(ans);
+//    }
+
+    // count frequency in each number
     public static void main(String[] args)
     {
-        int n1 = 4;
-        int n2 = 0;
-        int ans = 0;
-        if(n1 == 0 || n2 == 0)
+        Scanner sc = new Scanner(System.in);
+        int n = 8;
+        int arr[] = new int[n];
+        for(int i = 0;i<n;i++)
         {
-            System.out.println("zero");
-            return;
+            arr[i] = sc.nextInt();
         }
-
-        for(int i = 1;i<=n1*n2; i++)
+        int number = 3;
+        int count = 0;
+        for(int i = 0;i<n;i++)
         {
-            if(i % n1 == 0 && i % n2 == 0)
+            if(arr[i] == number)
             {
-                ans = i;
-                break;
+                count++;
             }
         }
-        System.out.println(ans);
+        System.out.println(count);
     }
 }
 
