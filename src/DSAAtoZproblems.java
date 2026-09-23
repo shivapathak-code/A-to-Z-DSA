@@ -1,4 +1,5 @@
 import java.net.SocketOption;
+import java.util.HashMap;
 import java.util.Scanner;
 
 // Basic math of dsa;
@@ -654,25 +655,36 @@ public class DSAAtoZproblems {
 //    }
 
     // count frequency in each number
+//    public static void main(String[] args)
+//    {
+//        Scanner sc = new Scanner(System.in);
+//        int n = 8;
+//        int arr[] = new int[n];
+//        for(int i = 0;i<n;i++)
+//        {
+//            arr[i] = sc.nextInt();
+//        }
+//        int number = 3;
+//        int count = 0;
+//        for(int i = 0;i<n;i++)
+//        {
+//            if(arr[i] == number)
+//            {
+//                count++;
+//            }
+//        }
+//        System.out.println(count);
+//    }
     public static void main(String[] args)
     {
-        Scanner sc = new Scanner(System.in);
-        int n = 8;
-        int arr[] = new int[n];
-        for(int i = 0;i<n;i++)
+        HashMap<Integer , Integer> freq = new HashMap<>();
+        int arr[] = {1,2,3,2,3,7,4,3,7,3,3,2,2,1,1,1,7};
+        
+        for(int num:arr)
         {
-            arr[i] = sc.nextInt();
+             freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
-        int number = 3;
-        int count = 0;
-        for(int i = 0;i<n;i++)
-        {
-            if(arr[i] == number)
-            {
-                count++;
-            }
-        }
-        System.out.println(count);
+        System.out.println(freq);
     }
 }
 
