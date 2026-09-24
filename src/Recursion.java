@@ -9,12 +9,15 @@ public class Recursion {
         //System.out.println("factorial " + factorial);
        // System.out.println(powOf2(5));
         //System.out.println(fib(4));
-        int arr[] = {10,20,30,40,50};
+        int arr[] = {10,20,30,40,50 , 30};
         int i = 0;
 //        int max = Integer.MIN_VALUE;
 //        maxelementinArray(arr , i , max);
-        int min = Integer.MAX_VALUE;
-        minelementinArray(arr , i , min);
+//        int min = Integer.MAX_VALUE;
+//        minelementinArray(arr , i , min);
+//        int tar = 30;
+        int count = 0;
+        countelement(arr , i , count);
 
 
     }
@@ -137,18 +140,43 @@ public class Recursion {
 //
 //    }
 
-    public static void minelementinArray(int[] arr ,int i , int min){
+//    public static void minelementinArray(int[] arr ,int i , int min){
+//
+//        if(i >= arr.length)
+//        {
+//            System.out.println("max value " + min);
+//            return;
+//        }
+//        if(arr[i] < min)
+//        {
+//            min = arr[i];
+//        }
+//        minelementinArray(arr ,i+1 , min);
+//
+//
+//    }
+
+//    public static void linearSearch(int[] arr ,int i ,int target){
+//
+//            if(arr[i] == target)
+//            {
+//                System.out.println(i);
+//                return;
+//            }
+//        linearSearch(arr ,i+1  , target);
+//
+//
+//    }
+
+    public static void countelement(int[] arr ,int i ,int count){
 
         if(i >= arr.length)
         {
-            System.out.println("max value " + min);
+            System.out.println(count);
             return;
         }
-        if(arr[i] < min)
-        {
-            min = arr[i];
-        }
-        minelementinArray(arr ,i+1 , min);
+        count++;
+        countelement(arr ,i+1  , count);
 
 
     }
