@@ -19,7 +19,10 @@ public class Recursion {
 //        int count = 0;
 //        countfreqelement(arr , i , count ,tar);
 
-        printdigit(123);
+        //printdigit(123);
+        int arr[] = {1,2,3,4,5};
+//        int sum = 0;
+        System.out.println(sumofArray(arr , 0));
 
 
     }
@@ -198,17 +201,29 @@ public class Recursion {
 //
 //    }
 
-    public static void printdigit(int n)
+//    public static void printdigit(int n)
+//    {
+//        if(n == 0)
+//        {
+//            return;
+//        }
+//
+//        int d = n%10;
+//        //System.out.println(d);
+//        n = n / 10;
+//        printdigit(n);
+//        System.out.println(d);
+//    }
+    public static int sumofArray(int[] arr , int i)
     {
-        if(n == 0)
+        int sum = 0;
+        if(i>= arr.length)
         {
-            return;
+            //System.out.println(sum);
+            return sum;
         }
+        sum += arr[i];
+         return sumofArray(arr , i+1);
 
-        int d = n%10;
-        //System.out.println(d);
-        n = n / 10;
-        printdigit(n);
-        System.out.println(d);
     }
 }
