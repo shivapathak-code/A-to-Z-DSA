@@ -7,7 +7,11 @@ public class Recursion {
         //print10T01(10);
         //int factorial = fact(5);
         //System.out.println("factorial " + factorial);
-        System.out.println(powOf2(5));
+       // System.out.println(powOf2(5));
+        //System.out.println(fib(4));
+        int arr[] = {10,20,30,40,50};
+        int i = 0;
+        Array(arr , i);
 
     }
 //    public static void printHello(int n){
@@ -60,14 +64,42 @@ public class Recursion {
 //
 //    }
 
-    public static int powOf2(int n){
+//    public static int powOf2(int n){
+//
+//        if(n == 0)
+//        {
+//            return 1 ;
+//        }
+//
+//        return 2 * powOf2(n -1);
+//
+//
+//    }
 
-        if(n == 0)
+//    public static int fib(int n){
+//
+//        if(n == 0)
+//        {
+//            return 0;
+//        }
+//        if(n == 1)
+//        {
+//            return 1;
+//        }
+//
+//        return (fib(n-1)+fib(n-2));
+//
+//
+//    }
+
+    public static void Array(int[] arr ,int i){
+
+        if(i >= arr.length)
         {
-            return 1 ;
+            return;
         }
-
-        return 2 * powOf2(n -1);
+        System.out.println(arr[i]);
+        Array(arr , i+1);
 
 
     }
