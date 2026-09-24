@@ -11,8 +11,10 @@ public class Recursion {
         //System.out.println(fib(4));
         int arr[] = {10,20,30,40,50};
         int i = 0;
-        int max = Integer.MIN_VALUE;
-        maxelementinArray(arr , i , max);
+//        int max = Integer.MIN_VALUE;
+//        maxelementinArray(arr , i , max);
+        int min = Integer.MAX_VALUE;
+        minelementinArray(arr , i , min);
 
 
     }
@@ -119,18 +121,34 @@ public class Recursion {
 //
 //    }
  //  find maxmimum number in array using recursion :
-    public static void maxelementinArray(int[] arr ,int i , int mxi){
+//    public static void maxelementinArray(int[] arr ,int i , int mxi){
+//
+//        if(i >= arr.length)
+//        {
+//            System.out.println("max value " + mxi);
+//            return;
+//        }
+//            if(arr[i] > mxi)
+//            {
+//                mxi = arr[i];
+//            }
+//        maxelementinArray(arr ,i+1 , mxi);
+//
+//
+//    }
+
+    public static void minelementinArray(int[] arr ,int i , int min){
 
         if(i >= arr.length)
         {
-            System.out.println("max value " + mxi);
+            System.out.println("max value " + min);
             return;
         }
-            if(arr[i] > mxi)
-            {
-                mxi = arr[i];
-            }
-        maxelementinArray(arr ,i+1 , mxi);
+        if(arr[i] < min)
+        {
+            min = arr[i];
+        }
+        minelementinArray(arr ,i+1 , min);
 
 
     }
