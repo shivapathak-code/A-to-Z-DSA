@@ -92,15 +92,28 @@ public class Recursion {
 //
 //    }
 
+//    public static void Array(int[] arr ,int i){
+//
+//        if(i >= arr.length)
+//        {
+//            return;
+//        }
+//        System.out.println(arr[i]);
+//        Array(arr , i+1);
+//
+//
+//    }
+
+    // reverce the array element;
     public static void Array(int[] arr ,int i){
 
         if(i >= arr.length)
         {
             return;
         }
-        System.out.println(arr[i]);
-        Array(arr , i+1);
 
+        Array(arr , i+1);
+        System.out.println(arr[i]);
 
     }
 }
