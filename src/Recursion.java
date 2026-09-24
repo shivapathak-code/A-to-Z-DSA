@@ -9,15 +9,17 @@ public class Recursion {
         //System.out.println("factorial " + factorial);
        // System.out.println(powOf2(5));
         //System.out.println(fib(4));
-        int arr[] = {10,20,30,40,50,30,30,30,50};
-        int i = 0;
+//        int arr[] = {10,20,30,40,50,30,30,30,50};
+//        int i = 0;
 //        int max = Integer.MIN_VALUE;
 //        maxelementinArray(arr , i , max);
 //        int min = Integer.MAX_VALUE;
 //        minelementinArray(arr , i , min);
-        int tar = 30;
-        int count = 0;
-        countfreqelement(arr , i , count ,tar);
+//        int tar = 30;
+//        int count = 0;
+//        countfreqelement(arr , i , count ,tar);
+
+        printdigit(123);
 
 
     }
@@ -181,18 +183,32 @@ public class Recursion {
 //
 //    }
 // count frequency of number;
-    public static void countfreqelement(int[] arr ,int i ,int count , int target){
+//    public static void countfreqelement(int[] arr ,int i ,int count , int target){
+//
+//        if(i >= arr.length)
+//        {
+//            System.out.println(count);
+//            return;
+//        }
+//        if(arr[i] == target) {
+//            count++;
+//        }
+//        countfreqelement(arr ,i+1  , count , target);
+//
+//
+//    }
 
-        if(i >= arr.length)
+    public static void printdigit(int n)
+    {
+        if(n == 0)
         {
-            System.out.println(count);
             return;
         }
-        if(arr[i] == target) {
-            count++;
-        }
-        countfreqelement(arr ,i+1  , count , target);
 
-
+        int d = n%10;
+        //System.out.println(d);
+        n = n / 10;
+        printdigit(n);
+        System.out.println(d);
     }
 }
