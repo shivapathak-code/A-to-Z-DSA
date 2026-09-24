@@ -4,7 +4,9 @@ public class Recursion {
 
         //printHello(6);
         //print1T010(10);
-        print10T01(10);
+        //print10T01(10);
+        int factorial = fact(5);
+        System.out.println("factorial " + factorial);
 
     }
 //    public static void printHello(int n){
@@ -32,15 +34,27 @@ public class Recursion {
 //
 //    }
 
-    public static void print10T01(int n){
+//    public static void print10T01(int n){
+//
+//        if(n == 0)
+//        {
+//            return ;
+//        }
+//
+//        System.out.println(n);
+//        print10T01(n -1);
+//
+//
+//    }
+
+    public static int fact(int n){
 
         if(n == 0)
         {
-            return ;
+            return 1 ;
         }
 
-        System.out.println(n);
-        print10T01(n -1);
+        return n * fact(n -1);
 
 
     }
