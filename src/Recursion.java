@@ -35,11 +35,11 @@ public class Recursion {
         int n = arr.length;
         int mid = 0+(n-0)/2;
         //if(n%2 == 0) {
-            for (int i = 0; i < mid; i++) {
-                int temp = arr[i];
-                arr[i] = arr[n - i - 1];
-                arr[n - i - 1] = temp;
-            }
+//            for (int i = 0; i < mid; i++) {
+//                int temp = arr[i];
+//                arr[i] = arr[n - i - 1];
+//                arr[n - i - 1] = temp;
+//            }
 //        }else {
 //            for (int i = 0; i < mid; i++) {
 //                int temp = arr[i];
@@ -47,7 +47,8 @@ public class Recursion {
 //                arr[n - i - 1] = temp;
 //            }
         //}
-        for(int i = 0;i<n;i++)
+        int brr[] = arrayReverse(arr ,mid ,0);
+        for(int i = 0;i<brr.length;i++)
         {
             System.out.print(arr[i] + " ");
         }
@@ -290,14 +291,18 @@ public class Recursion {
 //            return true;
 //        }
 
-//    public static void arrayReverse(int[] arr , int i)
-//    {
-//        if(i>=arr.length)
-//        {
-//            return;
-//        }
-//
-//    }
+    public static int[]  arrayReverse(int[] arr , int mid , int i)
+    {
+        int n = arr.length;
+        if(i >= mid)
+        {
+            return arr;
+        }
+            int temp = arr[i];
+            arr[i] = arr[n - i - 1];
+            arr[n - i - 1] = temp;
+            return arrayReverse(arr , mid , i+1);
+    }
 
     }
 
