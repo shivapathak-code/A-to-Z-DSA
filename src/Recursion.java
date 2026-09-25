@@ -9,7 +9,7 @@ public class Recursion {
         //System.out.println("factorial " + factorial);
        // System.out.println(powOf2(5));
         //System.out.println(fib(4));
-       int arr[] = {10,20,30,40,50,60,70,80,90 };
+//       int arr[] = {10,20,30,40,50,60,70,80,90 };
 //        int i = 0;
 //        int max = Integer.MIN_VALUE;
 //        maxelementinArray(arr , i , max);
@@ -32,8 +32,8 @@ public class Recursion {
 //            System.out.println(n + " is not a prime number.");
 //        }
         // reverse the array using loop;
-        int n = arr.length;
-        int mid = 0+(n-0)/2;
+//        int n = arr.length;
+//        int mid = 0+(n-0)/2;
         //if(n%2 == 0) {
 //            for (int i = 0; i < mid; i++) {
 //                int temp = arr[i];
@@ -47,11 +47,15 @@ public class Recursion {
 //                arr[n - i - 1] = temp;
 //            }
         //}
-        int brr[] = arrayReverse(arr ,mid ,0);
-        for(int i = 0;i<brr.length;i++)
-        {
-            System.out.print(arr[i] + " ");
-        }
+//        int brr[] = arrayReverse(arr ,mid ,0);
+//        for(int i = 0;i<brr.length;i++)
+//        {
+//            System.out.print(arr[i] + " ");
+//        }
+        int n = 123;
+       int ans =  adddigit(n);
+       System.out.println(ans);
+
 
 
     }
@@ -291,18 +295,29 @@ public class Recursion {
 //            return true;
 //        }
 
-    public static int[]  arrayReverse(int[] arr , int mid , int i)
+//    public static int[]  arrayReverse(int[] arr , int mid , int i)
+//    {
+//        int n = arr.length;
+//        if(i >= mid)
+//        {
+//            return arr;
+//        }
+//            int temp = arr[i];
+//            arr[i] = arr[n - i - 1];
+//            arr[n - i - 1] = temp;
+//            return arrayReverse(arr , mid , i+1);
+//    }
+    public static int adddigit(int n)
     {
-        int n = arr.length;
-        if(i >= mid)
+        int sum = 0;
+        if(n == 0)
         {
-            return arr;
+            return sum;
         }
-            int temp = arr[i];
-            arr[i] = arr[n - i - 1];
-            arr[n - i - 1] = temp;
-            return arrayReverse(arr , mid , i+1);
+        int d = n%10;
+        sum = sum+d;
+        return adddigit(n/10);
     }
 
-    }
+}
 
