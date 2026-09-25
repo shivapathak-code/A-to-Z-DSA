@@ -26,7 +26,7 @@ public class Recursion {
 
         int n = 13;
 
-        if (prime(n, 2)) {
+        if (prime(n)) {
             System.out.println(n + " is a prime number.");
         } else {
             System.out.println(n + " is not a prime number.");
@@ -235,22 +235,39 @@ public class Recursion {
 //
 //    }
 
-    public static boolean prime(int n , int i)
-    {
-        if(n < 2)
-        {
-            return false;
-        }
+//    public static boolean prime(int n , int i)
+//    {
+//        if(n < 2)
+//        {
+//            return false;
+//        }
+//
+//        if(i > Math.sqrt(n))
+//        {
+//            return true;
+//        }
+//        if(n % i == 0)
+//        {
+//            return false;
+//        }
+//        return prime(n , i+1);
+//
+//    }
 
-        if(i > Math.sqrt(n))
-        {
+        public static boolean prime(int n) {
+
+            if(n<2)
+            {
+                return false;
+            }
+            for(int i = 2;i<=Math.sqrt(n);i++)
+            {
+                if(n % i == 0)
+                {
+                    return false;
+                }
+            }
             return true;
         }
-        if(n % i == 0)
-        {
-            return false;
-        }
-        return prime(n , i+1);
-
     }
-}
+
