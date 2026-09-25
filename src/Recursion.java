@@ -9,7 +9,7 @@ public class Recursion {
         //System.out.println("factorial " + factorial);
        // System.out.println(powOf2(5));
         //System.out.println(fib(4));
-//        int arr[] = {10,20,30,40,50,30,30,30,50};
+       int arr[] = {10,20,30,40,50,60,70,80,90 };
 //        int i = 0;
 //        int max = Integer.MIN_VALUE;
 //        maxelementinArray(arr , i , max);
@@ -21,15 +21,35 @@ public class Recursion {
 
         //printdigit(123);
 //        int arr[] = {1,2,3,4,5};
-////        int sum = 0;
+//        int sum = 0;
 //        System.out.println(sumofArray(arr , 0));
 
-        int n = 13;
-
-        if (prime(n)) {
-            System.out.println(n + " is a prime number.");
-        } else {
-            System.out.println(n + " is not a prime number.");
+//        int n = 13;
+//
+//        if (prime(n)) {
+//            System.out.println(n + " is a prime number.");
+//        } else {
+//            System.out.println(n + " is not a prime number.");
+//        }
+        // reverse the array using loop;
+        int n = arr.length;
+        int mid = 0+(n-0)/2;
+        //if(n%2 == 0) {
+            for (int i = 0; i < mid; i++) {
+                int temp = arr[i];
+                arr[i] = arr[n - i - 1];
+                arr[n - i - 1] = temp;
+            }
+//        }else {
+//            for (int i = 0; i < mid; i++) {
+//                int temp = arr[i];
+//                arr[i] = arr[n - i - 1];
+//                arr[n - i - 1] = temp;
+//            }
+        //}
+        for(int i = 0;i<n;i++)
+        {
+            System.out.print(arr[i] + " ");
         }
 
 
@@ -254,20 +274,30 @@ public class Recursion {
 //
 //    }
 
-        public static boolean prime(int n) {
+//        public static boolean prime(int n) {
+//
+//            if(n<2)
+//            {
+//                return false;
+//            }
+//            for(int i = 2;i<=Math.sqrt(n);i++)
+//            {
+//                if(n % i == 0)
+//                {
+//                    return false;
+//                }
+//            }
+//            return true;
+//        }
 
-            if(n<2)
-            {
-                return false;
-            }
-            for(int i = 2;i<=Math.sqrt(n);i++)
-            {
-                if(n % i == 0)
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
+//    public static void arrayReverse(int[] arr , int i)
+//    {
+//        if(i>=arr.length)
+//        {
+//            return;
+//        }
+//
+//    }
+
     }
 
