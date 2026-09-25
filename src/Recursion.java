@@ -20,9 +20,17 @@ public class Recursion {
 //        countfreqelement(arr , i , count ,tar);
 
         //printdigit(123);
-        int arr[] = {1,2,3,4,5};
-//        int sum = 0;
-        System.out.println(sumofArray(arr , 0));
+//        int arr[] = {1,2,3,4,5};
+////        int sum = 0;
+//        System.out.println(sumofArray(arr , 0));
+
+        int n = 13;
+
+        if (prime(n, 2)) {
+            System.out.println(n + " is a prime number.");
+        } else {
+            System.out.println(n + " is not a prime number.");
+        }
 
 
     }
@@ -214,16 +222,35 @@ public class Recursion {
 //        printdigit(n);
 //        System.out.println(d);
 //    }
-    public static int sumofArray(int[] arr , int i)
+//    public static int sumofArray(int[] arr , int i)
+//    {
+//        int sum = 0;
+//        if(i>= arr.length)
+//        {
+//            //System.out.println(sum);
+//            return sum;
+//        }
+//        sum += arr[i];
+//         return sumofArray(arr , i+1);
+//
+//    }
+
+    public static boolean prime(int n , int i)
     {
-        int sum = 0;
-        if(i>= arr.length)
+        if(n < 2)
         {
-            //System.out.println(sum);
-            return sum;
+            return false;
         }
-        sum += arr[i];
-         return sumofArray(arr , i+1);
+
+        if(i > Math.sqrt(n))
+        {
+            return true;
+        }
+        if(n % i == 0)
+        {
+            return false;
+        }
+        return prime(n , i+1);
 
     }
 }
