@@ -166,3 +166,19 @@ class ListNode{
 //        return head;
 //    }
 //}
+//delete at the tail in linkedlist
+//class Solution {
+//    public ListNode deleteTail(ListNode head) {
+//        ListNode temp = head;
+//        if(head.next == null){
+//            return head.next;
+//
+//        }
+//        while(temp.next.next!=null){
+//            temp = temp.next;
+//
+//        }
+//        temp.next = null;
+//        return head;
+//    }
+//}
