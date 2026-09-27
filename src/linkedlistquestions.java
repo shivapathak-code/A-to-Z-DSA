@@ -241,3 +241,53 @@ class ListNode{
 //
 //    }
 //}
+
+// insertion in kth position save all test case ;
+
+/*
+Definition of singly linked list:
+class ListNode{
+    public int data;
+    public ListNode next;
+    ListNode() { data = 0; next = null; }
+    ListNode(int x) { data = x; next = null; }
+    ListNode(int x, ListNode next) { data = x; this.next = next; }
+}
+*/
+
+//class Solution {
+//    public ListNode insertAtKthPosition(ListNode head, int X, int K) {
+//        ListNode newNode = new ListNode(X);
+//
+//
+//        if(head == null && K<=1)
+//        {
+//            return newNode;
+//        }
+//        if(head != null && K == 1)
+//
+//        {
+//            newNode.next = head;
+//            head = newNode;
+//            return head;
+//        }
+//        ListNode temp = head;
+//        ListNode prev = null;
+//
+//        for(int i = 1;i<=K-1;i++)
+//        {
+//            prev = temp;
+//            // k ki value yahan badi hogi jab tak hame k-1 ban tak loop chalaya to temp sayad null ho jye is bajaya
+//            // se hame check kerna padega kahi temp null to nhi hain hain
+//            if(temp == null)
+//            {
+//                return head;
+//            }
+//            temp = temp.next;
+//        }
+//        newNode.next = temp;
+//        prev.next = newNode;
+//        return head;
+//
+//    }
+//}
