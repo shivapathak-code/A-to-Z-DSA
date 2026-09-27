@@ -401,3 +401,54 @@ class ListNode {
 //        return head;
 //    }
 //}
+/*
+// Definition for a Node.
+class ListNode {
+    public int data;
+    public ListNode prev;
+    public ListNode next;
+    public ListNode();
+    public ListNode(int data);
+    public ListNode(int data, ListNode prev, ListNode next);
+};
+*/
+
+//class Solution {
+//    public ListNode deleteKthElement(ListNode head, int k) {
+//        if(head == null || k<=0)
+//        {
+//            return head;
+//        }
+//        if(k == 1)
+//        {
+//            ListNode newhead = head.next;
+//            if(newhead!=null)
+//            {
+//                newhead.prev = null;
+//            }
+//            head.next = null;
+//            return newhead;
+//        }
+//        ListNode temp = head;
+//        for(int i = 1;i<=k-1 && temp!=null;i++)
+//        {
+//            temp = temp.next;
+//        }
+//        if (temp == null) {
+//            return head;
+//        }
+//        if(temp.prev!=null)
+//        {
+//            temp.prev.next = temp.next;
+//        }
+//        if(temp.next != null)
+//        {
+//            temp.next.prev = temp.prev;
+//        }
+//        temp.prev = null;
+//        temp.next = null;
+//
+//        return head;
+//
+//    }
+//}
