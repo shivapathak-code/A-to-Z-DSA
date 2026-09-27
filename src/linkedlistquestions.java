@@ -291,3 +291,46 @@ class ListNode{
 //
 //    }
 //}
+
+// /*
+//Definition of singly linked list:
+//class ListNode{
+//    public int data;
+//    public ListNode next;
+//    ListNode() { data = 0; next = null; }
+//    ListNode(int x) { data = x; next = null; }
+//    ListNode(int x, ListNode next) { data = x; this.next = next; }
+//}
+//*/
+//
+//class Solution {
+//    public ListNode insertBeforeX(ListNode head, int X, int val) {
+//        ListNode newNode = new ListNode(val);
+//        if(head == null)
+//        {
+//            return newNode;
+//        }
+//        if(head.data == X)
+//        {
+//            newNode.next = head;
+//            head = newNode;
+//            return head;
+//        }
+//        ListNode temp = head;
+//        ListNode prev = null;
+//
+//        while(temp != null)
+//        {
+//            if(temp.data == X)
+//            {
+//                newNode.next = temp;
+//                prev.next = newNode;
+//                return head;
+//            }
+//            prev = temp;
+//            temp = temp.next;
+//
+//        }
+//        return head;
+//    }
+//}
