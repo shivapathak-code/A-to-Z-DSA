@@ -452,3 +452,38 @@ class ListNode {
 //
 //    }
 //}
+// here iss given a node not given head  so not travel the complete list only check the node
+//preform opretation only check condition
+// where use head so use node direct number;
+
+/*
+// Definition for a Node.
+class ListNode {
+    public int data;
+    public ListNode prev;
+    public ListNode next;
+    public ListNode();
+    public ListNode(int data);
+    public ListNode(int data, ListNode prev, ListNode next);
+};
+*/
+
+//class Solution {
+//    public void deleteGivenNode(ListNode node) {
+//        if (node == null) {
+//            return;
+//        }
+//
+//        if (node.prev != null) {
+//            node.prev.next = node.next;
+//        }
+//
+//        if (node.next != null) {
+//            node.next.prev = node.prev;
+//        }
+//
+//        node.prev = null;
+//        node.next = null;
+//    }
+//}
+
