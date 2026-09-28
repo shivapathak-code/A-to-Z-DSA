@@ -487,3 +487,46 @@ class ListNode {
 //    }
 //}
 
+/*
+// Definition for a Node.
+class ListNode {
+    public int data;
+    public ListNode prev;
+    public ListNode next;
+    public ListNode();
+    public ListNode(int data);
+    public ListNode(int data, ListNode prev, ListNode next);
+};
+*/
+
+
+// connection of doubly linkedlist only four connection first connection left to right and after connect
+// second connection of newNode;
+//class Solution {
+//    public ListNode insertBeforeTail(ListNode head, int X) {
+//        ListNode newNode = new ListNode(X);
+//        if(head.next == null)
+//        {
+//            newNode.next = head;
+//            head.prev = newNode;
+//            return newNode;
+//        }
+//
+//        ListNode temp = head;
+//
+//        while(temp.next != null)
+//        {
+//            temp = temp.next;
+//        }
+//        newNode.prev = temp.prev ;
+//        newNode.next = temp;
+//        temp.prev.next = newNode;
+//        temp.prev =  newNode;
+//
+//
+//
+//        return head;
+//    }
+//}
+
+
