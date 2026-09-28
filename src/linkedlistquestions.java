@@ -627,35 +627,74 @@ class ListNode {
 }
  */
 
+//class Solution {
+//    public ListNode removeNthFromEnd(ListNode head, int n) {
+//        if(head.next == null && n <= 0)
+//        {
+//            return head;
+//        }
+//        ListNode temp = head;
+//        int count = 0;
+//        while(temp != null)
+//        {
+//            count++;
+//            temp = temp.next;
+//        }
+//        if(count == n)
+//        {
+//            return head.next;
+//        }
+//        ListNode curr = head;
+//        ListNode prev = null;
+//
+//        for(int i = 1; i<=count-n;i++)
+//        {
+//            prev = curr;
+//            curr = curr.next;
+//        }
+//        prev.next = curr.next;
+//
+//        return head;
+//
+//
+//    }
+//}
+
+/*Definition of singly linked list:
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {
+        val = 0;
+        next = null;
+    }
+
+    ListNode(int data1) {
+        val = data1;
+        next = null;
+    }
+
+    ListNode(int data1, ListNode next1) {
+        val = data1;
+        next = next1;
+    }
+}
+ */
+
 class Solution {
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-        if(head.next == null && n <= 0)
-        {
-            return head;
-        }
-        ListNode temp = head;
-        int count = 0;
-        while(temp != null)
-        {
-            count++;
-            temp = temp.next;
-        }
-        if(count == n)
-        {
-            return head.next;
-        }
-        ListNode curr = head;
+    public ListNode reverseList(ListNode head) {
+
         ListNode prev = null;
+        ListNode curr = head;
 
-        for(int i = 1; i<=count-n;i++)
+        while(curr != null)
         {
+            ListNode forward = curr.next;
+            curr.next = prev;
             prev = curr;
-            curr = curr.next;
+            curr = forward;
         }
-        prev.next = curr.next;
-
-        return head;
-
-
+        return prev;
     }
 }
