@@ -530,3 +530,46 @@ class ListNode {
 //}
 
 
+/*
+// Definition for a Node.
+class ListNode {
+    public int data;
+    public ListNode prev;
+    public ListNode next;
+    public ListNode();
+    public ListNode(int data);
+    public ListNode(int data, ListNode prev, ListNode next);
+};
+*/
+
+//class Solution {
+//    public ListNode insertBeforeKthPosition(ListNode head, int X, int K) {
+//        ListNode newNode = new ListNode(X);
+//        if(head == null && K <= 0)
+//        {
+//            return newNode;
+//        }
+//        if(K == 1)
+//        {
+//            newNode.next = head;
+//            head.prev = newNode;
+//            return newNode;
+//        }
+//        ListNode temp = head;
+//
+//        for(int i = 1;i<=K-1;i++)
+//        {
+//            temp = temp.next;
+//        }
+//
+//
+//        newNode.prev = temp.prev;
+//
+//        newNode.next = temp;
+//
+//        temp.prev.next = newNode;
+//        temp.prev = newNode;
+//        return head;
+//    }
+//}
+//
