@@ -586,20 +586,20 @@ class ListNode {
 };
 */
 
-class Solution {
-    public void insertBeforeGivenNode(ListNode node, int X) {
-        ListNode newNode = new ListNode(X);
-        if(node == null)
-        {
-            return;
-        }
-
-
-        newNode.prev = node.prev;
-        newNode.next = node;
-
-
-        node.prev.next = newNode;
-        node.prev = newNode;
-    }
-}
+//class Solution {
+//    public void insertBeforeGivenNode(ListNode node, int X) {
+//        ListNode newNode = new ListNode(X);
+//        if(node == null)
+//        {
+//            return;
+//        }
+//
+//
+//        newNode.prev = node.prev;
+//        newNode.next = node;
+//
+//
+//        node.prev.next = newNode;
+//        node.prev = newNode;
+//    }
+//}
