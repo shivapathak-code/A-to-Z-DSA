@@ -682,19 +682,64 @@ class ListNode {
 }
  */
 
+//class Solution {
+//    public ListNode reverseList(ListNode head) {
+//
+//        ListNode prev = null;
+//        ListNode curr = head;
+//
+//        while(curr != null)
+//        {
+//            ListNode forward = curr.next;
+//            curr.next = prev;
+//            prev = curr;
+//            curr = forward;
+//        }
+//        return prev;
+//    }
+//}
+
+
+
+/*Definition for Singly Linked List
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {
+        val = 0;
+        next = null;
+    }
+
+    ListNode(int data1) {
+        val = data1;
+        next = null;
+    }
+
+    ListNode(int data1, ListNode next1) {
+        val = data1;
+        next = next1;
+    }
+}
+*/
+
 class Solution {
-    public ListNode reverseList(ListNode head) {
-
-        ListNode prev = null;
-        ListNode curr = head;
-
-        while(curr != null)
+    public ListNode middleOfLinkedList(ListNode head) {
+        ListNode temp = head;
+        int count = 0;
+        while(temp != null)
         {
-            ListNode forward = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = forward;
+            count++;
+            temp = temp.next;
         }
-        return prev;
+        int  mid = count/2;
+
+        temp = head;
+        for(int i = 1;i<=mid;i++)
+        {
+            temp = temp.next;
+        }
+        return temp;
+
     }
 }
