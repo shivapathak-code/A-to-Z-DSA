@@ -723,23 +723,89 @@ class ListNode {
 }
 */
 
+//class Solution {
+//    public ListNode middleOfLinkedList(ListNode head) {
+//        ListNode temp = head;
+//        int count = 0;
+//        while(temp != null)
+//        {
+//            count++;
+//            temp = temp.next;
+//        }
+//        int  mid = count/2;
+//
+//        temp = head;
+//        for(int i = 1;i<=mid;i++)
+//        {
+//            temp = temp.next;
+//        }
+//        return temp;
+//
+//    }
+//}
+
+/*Definition of singly linked list:
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {
+        val = 0;
+        next = null;
+    }
+
+    ListNode(int data1) {
+        val = data1;
+        next = null;
+    }
+
+    ListNode(int data1, ListNode next1) {
+        val = data1;
+        next = next1;
+    }
+}
+ */
+
 class Solution {
-    public ListNode middleOfLinkedList(ListNode head) {
-        ListNode temp = head;
-        int count = 0;
+    public ListNode reverseList(ListNode head)
+    {
+        ListNode prev = null;
+        ListNode curr = head;
+        while(curr != null)
+        {
+            ListNode forward = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = forward;
+        }
+        return prev;
+    }
+    public boolean isPalindrome(ListNode head) {
+
+        if(head == null || head.next == null)
+        {
+            return true;
+        }
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while(fast.next != null && fast.next.next != null)
+        {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        ListNode secodHalf = reverseList(slow.next);
+        ListNode firstHalf = head;
+        ListNode temp = secodHalf;
         while(temp != null)
         {
-            count++;
+            if(firstHalf.val != temp.val)
+            {
+                return false;
+            }
+            firstHalf = firstHalf.next;
             temp = temp.next;
         }
-        int  mid = count/2;
-
-        temp = head;
-        for(int i = 1;i<=mid;i++)
-        {
-            temp = temp.next;
-        }
-        return temp;
-
+        return true;
     }
 }
