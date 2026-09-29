@@ -1019,38 +1019,101 @@ class ListNode {
 }
  */
 
+//class Solution {
+//    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+//
+//        ListNode dummy = new ListNode(-1);
+//        ListNode anshead = dummy;
+//        ListNode anstail = dummy;
+//
+//        while(list1 != null && list2 != null)
+//        {
+//            if(list1.val < list2.val)
+//            {
+//                anstail.next = list1;
+//                list1 = list1.next;
+//                anstail = anstail.next;
+//            }
+//            else
+//            {
+//                anstail.next = list2;
+//                list2 = list2.next;
+//                anstail = anstail.next;
+//            }
+//        }
+//        if(list1 != null)
+//        {
+//            anstail.next = list1;
+//        }
+//        if(list2 != null)
+//        {
+//            anstail.next = list2;
+//        }
+//
+//        return anshead.next;
+//
+//    }
+//}
+
+/*Definition of singly linked list:
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {
+        val = 0;
+        next = null;
+    }
+
+    ListNode(int data1) {
+        val = data1;
+        next = null;
+    }
+
+    ListNode(int data1, ListNode next1) {
+        val = data1;
+        next = next1;
+    }
+}
+ */
+
 class Solution {
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+    public ListNode rotateRight(ListNode head, int k) {
 
-        ListNode dummy = new ListNode(-1);
-        ListNode anshead = dummy;
-        ListNode anstail = dummy;
-
-        while(list1 != null && list2 != null)
+        if(head == null || k == 0)
         {
-            if(list1.val < list2.val)
-            {
-                anstail.next = list1;
-                list1 = list1.next;
-                anstail = anstail.next;
-            }
-            else
-            {
-                anstail.next = list2;
-                list2 = list2.next;
-                anstail = anstail.next;
-            }
+            return head;
         }
-        if(list1 != null)
+        int len = 1;
+        ListNode temp = head;
+        // yahan hame apni length calculate ker lena or temp ko fix
+        // ker dena vahan jahan se list ko cycklic ker dena hain ;
+        while(temp.next != null)
         {
-            anstail.next = list1;
-        }
-        if(list2 != null)
-        {
-            anstail.next = list2;
+            len++;
+            temp = temp.next;
         }
 
-        return anshead.next;
+        // yahan hame apni linkedlist ko cycklic bana dena;
+
+        temp.next = head;
+
+        k = k % len;
+        // yahan se muje apne k ko calculate ker lena or us jagah tak le jana hain jahan se
+        //list ko break kerna hain;
+        temp = head;
+        for(int i = 1;i<=len-k-1;i++)
+        {
+            temp = temp.next;
+        }
+        ListNode forward = temp.next;
+
+
+        // yahan se muje apni linkedlist ko break ker dena hain;
+        temp.next = null;
+
+        // new head return ker dena  hain
+        return forward;
 
     }
 }
