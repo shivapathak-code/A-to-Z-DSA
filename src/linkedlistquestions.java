@@ -766,46 +766,127 @@ class ListNode {
 }
  */
 
-class Solution {
-    public ListNode reverseList(ListNode head)
-    {
-        ListNode prev = null;
-        ListNode curr = head;
-        while(curr != null)
-        {
-            ListNode forward = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = forward;
-        }
-        return prev;
+//class Solution {
+//    public ListNode reverseList(ListNode head)
+//    {
+//        ListNode prev = null;
+//        ListNode curr = head;
+//        while(curr != null)
+//        {
+//            ListNode forward = curr.next;
+//            curr.next = prev;
+//            prev = curr;
+//            curr = forward;
+//        }
+//        return prev;
+//    }
+//    public boolean isPalindrome(ListNode head) {
+//
+//        if(head == null || head.next == null)
+//        {
+//            return true;
+//        }
+//        ListNode slow = head;
+//        ListNode fast = head;
+//
+//        while(fast.next != null && fast.next.next != null)
+//        {
+//            slow = slow.next;
+//            fast = fast.next.next;
+//        }
+//        ListNode secodHalf = reverseList(slow.next);
+//        ListNode firstHalf = head;
+//        ListNode temp = secodHalf;
+//        while(temp != null)
+//        {
+//            if(firstHalf.val != temp.val)
+//            {
+//                return false;
+//            }
+//            firstHalf = firstHalf.next;
+//            temp = temp.next;
+//        }
+//        return true;
+//    }
+//}
+
+
+/*Definition of singly linked list:
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {
+        val = 0;
+        next = null;
     }
-    public boolean isPalindrome(ListNode head) {
 
-        if(head == null || head.next == null)
-        {
-            return true;
-        }
-        ListNode slow = head;
-        ListNode fast = head;
+    ListNode(int data1) {
+        val = data1;
+        next = null;
+    }
 
-        while(fast.next != null && fast.next.next != null)
-        {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        ListNode secodHalf = reverseList(slow.next);
-        ListNode firstHalf = head;
-        ListNode temp = secodHalf;
-        while(temp != null)
-        {
-            if(firstHalf.val != temp.val)
-            {
-                return false;
-            }
-            firstHalf = firstHalf.next;
-            temp = temp.next;
-        }
-        return true;
+    ListNode(int data1, ListNode next1) {
+        val = data1;
+        next = next1;
     }
 }
+ */
+
+//class Solution {
+//    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+//        if(headA == null || headB == null)
+//        {
+//            return null;
+//        }
+//        ListNode a = headA;
+//        ListNode b = headB;
+//
+//        while(a != null && b != null)
+//        {
+//            a = a.next;
+//            b = b.next;
+//        }
+//        if(a == null)
+//        {
+//            int bextralen = 0;
+//            while(b != null)
+//            {
+//                bextralen++;
+//                b = b.next;
+//            }
+//            while(bextralen-- >0)
+//            {
+//                headB = headB.next;
+//            }
+//        }
+//        else
+//        {
+//            int aextralen = 0;
+//            while(a != null)
+//            {
+//                aextralen++;
+//                a = a.next;
+//            }
+//            while(aextralen-- >0)
+//            {
+//                headA = headA.next;
+//            }
+//        }
+//
+//        while(headA != null && headB != null)
+//        {
+//            if(headA == headB)
+//            {
+//                return headA;
+//            }
+//            else
+//            {
+//                headA = headA.next;
+//                headB = headB.next;
+//            }
+//        }
+//        return null;
+//
+//    }
+//}
