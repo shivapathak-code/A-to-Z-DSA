@@ -1235,6 +1235,47 @@ class ListNode {
 //
 //    }
 //}
+//class Solution {
+//    public List<List<Integer>> findPairsWithGivenSum(ListNode head, int target) {
+//
+//        List<List<Integer>> ans = new ArrayList<>();
+//
+//        if (head == null || head.next == null) {
+//            return ans;
+//        }
+//
+//        ListNode tail = head;
+//
+//        while (tail.next != null) {
+//            tail = tail.next;
+//        }
+//
+//        ListNode first = head;
+//        ListNode last = tail;
+//
+//        while (first != last && first.prev != last) {
+//
+//            int sum = first.val + last.val;
+//
+//            if (sum == target) {
+//                ans.add(Arrays.asList(first.val, last.val));
+//
+//                first = first.next;
+//                last = last.prev;
+//            }
+//            else if (sum < target) {
+//                first = first.next;
+//            }
+//            else {
+//                last = last.prev;
+//            }
+//        }
+//
+//        return ans;
+//    }
+//}
+//
+
 class Solution {
     public List<List<Integer>> findPairsWithGivenSum(ListNode head, int target) {
 
