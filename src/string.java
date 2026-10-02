@@ -47,25 +47,52 @@ public class string {
 //    }
 
 
+//    class Solution {
+//        public boolean palindromeCheck(String s) {
+//
+//            String original = s;
+//            StringBuilder rev = new StringBuilder();
+//
+//            if (s.isEmpty()) {
+//                return true;
+//            }
+//
+//            for (int i = s.length() - 1; i >= 0; i--) {
+//                rev.append(s.charAt(i));
+//            }
+//
+//            if (original.equals(rev.toString())) {
+//                return true;
+//            } else {
+//                return false;
+//            }
+//        }
+//    }
+
+
     class Solution {
-        public boolean palindromeCheck(String s) {
+        public String largeOddNum(String s) {
 
-            String original = s;
-            StringBuilder rev = new StringBuilder();
-
-            if (s.isEmpty()) {
-                return true;
-            }
-
+            // Right se first odd digit find karo
             for (int i = s.length() - 1; i >= 0; i--) {
-                rev.append(s.charAt(i));
+
+                char ch = s.charAt(i);
+                // actual digit main convert kerta hain (ch - '0') ye kerta hain convert;
+
+                if ((ch - '0') % 2 != 0) {
+
+                    // Leading zeros remove karo
+                    int start = 0;
+
+                    while (start <= i && s.charAt(start) == '0') {
+                        start++;
+                    }
+
+                    return s.substring(start, i + 1);
+                }
             }
 
-            if (original.equals(rev.toString())) {
-                return true;
-            } else {
-                return false;
-            }
+            return "";
         }
     }
 
