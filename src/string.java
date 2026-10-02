@@ -70,29 +70,60 @@ public class string {
 //    }
 
 
+//    class Solution {
+//        public String largeOddNum(String s) {
+//
+//            // Right se first odd digit find karo
+//            for (int i = s.length() - 1; i >= 0; i--) {
+//
+//                char ch = s.charAt(i);
+//                // actual digit main convert kerta hain (ch - '0') ye kerta hain convert;
+//
+//                if ((ch - '0') % 2 != 0) {
+//
+//                    // Leading zeros remove karo
+//                    int start = 0;
+//
+//                    while (start <= i && s.charAt(start) == '0') {
+//                        start++;
+//                    }
+//
+//                    return s.substring(start, i + 1);
+//                }
+//            }
+//
+//            return "";
+//        }
+//    }
+
     class Solution {
-        public String largeOddNum(String s) {
+        public String common(String s1 , String s2)
+        {
+            int n = Math.min(s1.length() , s2.length());
+            StringBuilder sb = new StringBuilder();
 
-            // Right se first odd digit find karo
-            for (int i = s.length() - 1; i >= 0; i--) {
-
-                char ch = s.charAt(i);
-                // actual digit main convert kerta hain (ch - '0') ye kerta hain convert;
-
-                if ((ch - '0') % 2 != 0) {
-
-                    // Leading zeros remove karo
-                    int start = 0;
-
-                    while (start <= i && s.charAt(start) == '0') {
-                        start++;
-                    }
-
-                    return s.substring(start, i + 1);
+            for(int i = 0;i<n;i++)
+            {
+                if(s1.charAt(i) == s2.charAt(i))
+                {
+                    sb.append(s1.charAt(i));
+                }
+                else
+                {
+                    break;
                 }
             }
+            return sb.toString();
 
-            return "";
+        }
+        public String longestCommonPrefix(String[] str) {
+            String ans = str[0];
+
+            for(int i = 1;i<str.length;i++)
+            {
+                ans  = common(ans , str[i]);
+            }
+            return ans;
         }
     }
 
