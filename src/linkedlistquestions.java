@@ -1342,64 +1342,64 @@ class ListNode {
     }
 }
 */
-class Solution {
-
-    public ListNode flattenLinkedList(ListNode head) {
-
-        // Base case
-        if (head == null || head.next == null) {
-            return head;
-        }
-
-        // Pehle right side ki lists ko flatten karo
-        head.next = flattenLinkedList(head.next);
-
-        // Current list aur flattened list ko merge karo
-        head = merge(head, head.next);
-
-        return head;
-    }
-
-    private ListNode merge(ListNode a, ListNode b) {
-
-        // Temporary node
-        ListNode dummy = new ListNode(0);
-
-        // Result list banane ke liye
-        ListNode temp = dummy;
-
-        // Dono lists ko compare karo
-        while (a != null && b != null) {
-
-            if (a.val <= b.val) {
-                temp.child = a;
-                a = a.child;
-            } else {
-                temp.child = b;
-                b = b.child;
-            }
-
-            temp = temp.child;
-        }
-
-        // Jo list bach gayi hai, use attach karo
-        if (a != null) {
-            temp.child = a;
-        } else {
-            temp.child = b;
-        }
-
-        // Sabhi next pointers ko null karo
-        ListNode curr = dummy.child;
-
-        while (curr != null) {
-            curr.next = null;
-            curr = curr.child;
-        }
-
-        // Final flattened list ka head
-        return dummy.child;
-    }
-}
-
-
+//class Solution {
+//
+//    public ListNode flattenLinkedList(ListNode head) {
+//
+//        // Base case
+//        if (head == null || head.next == null) {
+//            return head;
+//        }
+//
+//        // Pehle right side ki lists ko flatten karo
+//        head.next = flattenLinkedList(head.next);
+//
+//        // Current list aur flattened list ko merge karo
+//        head = merge(head, head.next);
+//
+//        return head;
+//    }
+//
+//    private ListNode merge(ListNode a, ListNode b) {
+//
+//        // Temporary node
+//        ListNode dummy = new ListNode(0);
+//
+//        // Result list banane ke liye
+//        ListNode temp = dummy;
+//
+//        // Dono lists ko compare karo
+//        while (a != null && b != null) {
+//
+//            if (a.val <= b.val) {
+//                temp.child = a;
+//                a = a.child;
+//            } else {
+//                temp.child = b;
+//                b = b.child;
+//            }
+//
+//            temp = temp.child;
+//        }
+//
+//        // Jo list bach gayi hai, use attach karo
+//        if (a != null) {
+//            temp.child = a;
+//        } else {
+//            temp.child = b;
+//        }
+//
+//        // Sabhi next pointers ko null karo
+//        ListNode curr = dummy.child;
+//
+//        while (curr != null) {
+//            curr.next = null;
+//            curr = curr.child;
+//        }
+//
+//        // Final flattened list ka head
+//        return dummy.child;
+//    }
+//}
+//
+//
