@@ -23,4 +23,27 @@ public class string {
         System.out.println(new String(arr));
     }
 
+    // kabhi kabhi input ke according bi hame change kerna padta hain
+    // jaise upper hamne string as a input li
+    // to array main convert kerke sab array ke method use kiye hain
+    // ab ham use ker hain ek list of string to hame ab jo
+    // sab method list ke use kerne honge like as get set size ;
+
+    class Solution {
+        public void reverseString(List<Character> s) {
+
+            int left = 0;
+            int right = s.size() - 1;
+
+            while (left < right) {
+                Character temp = s.get(left);
+                s.set(left, s.get(right));
+                s.set(right, temp);
+
+                left++;
+                right--;
+            }
+        }
+    }
+
 }
