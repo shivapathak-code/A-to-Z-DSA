@@ -3,25 +3,25 @@ public class string {
     // string jo hain immutable hoti hain to jab bi ase opertaion kerne hote hain to uske
     // hame use array main convert  kerna padta hain
     //like this;
-    public static void main(String[] args) {
-        String input = "hello";
-
-        char[] arr = input.toCharArray();
-
-        int left = 0;
-        int right = arr.length - 1;
-
-        while (left < right) {
-            char temp = arr[left];
-            arr[left] = arr[right];
-            arr[right] = temp;
-
-            left++;
-            right--;
-        }
-
-        System.out.println(new String(arr));
-    }
+//    public static void main(String[] args) {
+//        String input = "hello";
+//
+//        char[] arr = input.toCharArray();
+//
+//        int left = 0;
+//        int right = arr.length - 1;
+//
+//        while (left < right) {
+//            char temp = arr[left];
+//            arr[left] = arr[right];
+//            arr[right] = temp;
+//
+//            left++;
+//            right--;
+//        }
+//
+//        System.out.println(new String(arr));
+//    }
 
     // kabhi kabhi input ke according bi hame change kerna padta hain
     // jaise upper hamne string as a input li
@@ -29,19 +29,42 @@ public class string {
     // ab ham use ker hain ek list of string to hame ab jo
     // sab method list ke use kerne honge like as get set size ;
 
+//    class Solution {
+//        public void reverseString(List<Character> s) {
+//
+//            int left = 0;
+//            int right = s.size() - 1;
+//
+//            while (left < right) {
+//                Character temp = s.get(left);
+//                s.set(left, s.get(right));
+//                s.set(right, temp);
+//
+//                left++;
+//                right--;
+//            }
+//        }
+//    }
+
+
     class Solution {
-        public void reverseString(List<Character> s) {
+        public boolean palindromeCheck(String s) {
 
-            int left = 0;
-            int right = s.size() - 1;
+            String original = s;
+            StringBuilder rev = new StringBuilder();
 
-            while (left < right) {
-                Character temp = s.get(left);
-                s.set(left, s.get(right));
-                s.set(right, temp);
+            if (s.isEmpty()) {
+                return true;
+            }
 
-                left++;
-                right--;
+            for (int i = s.length() - 1; i >= 0; i--) {
+                rev.append(s.charAt(i));
+            }
+
+            if (original.equals(rev.toString())) {
+                return true;
+            } else {
+                return false;
             }
         }
     }
