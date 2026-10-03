@@ -96,35 +96,76 @@ public class string {
 //        }
 //    }
 
-    class Solution {
-        public String common(String s1 , String s2)
-        {
-            int n = Math.min(s1.length() , s2.length());
-            StringBuilder sb = new StringBuilder();
+//    class Solution {
+//        public String common(String s1 , String s2)
+//        {
+//            int n = Math.min(s1.length() , s2.length());
+//            StringBuilder sb = new StringBuilder();
+//
+//            for(int i = 0;i<n;i++)
+//            {
+//                if(s1.charAt(i) == s2.charAt(i))
+//                {
+//                    sb.append(s1.charAt(i));
+//                }
+//                else
+//                {
+//                    break;
+//                }
+//            }
+//            return sb.toString();
+//
+//        }
+//        public String longestCommonPrefix(String[] str) {
+//            String ans = str[0];
+//
+//            for(int i = 1;i<str.length;i++)
+//            {
+//                ans  = common(ans , str[i]);
+//            }
+//            return ans;
+//        }
+//    }
 
-            for(int i = 0;i<n;i++)
-            {
-                if(s1.charAt(i) == s2.charAt(i))
-                {
-                    sb.append(s1.charAt(i));
-                }
-                else
-                {
-                    break;
-                }
-            }
-            return sb.toString();
-
-        }
-        public String longestCommonPrefix(String[] str) {
-            String ans = str[0];
-
-            for(int i = 1;i<str.length;i++)
-            {
-                ans  = common(ans , str[i]);
-            }
-            return ans;
-        }
-    }
+//    class Solution {
+//        public boolean isomorphicString(String s, String t) {
+//
+//            if(s.length() != t.length())
+//            {
+//                return false;
+//            }
+//            HashMap<Character ,Character> mp1 = new HashMap<>();
+//            HashMap<Character ,Boolean> mp2 = new HashMap<>();
+//
+//            int n = s.length();
+//            for(int i = 0;i<n;i++)
+//            {
+//                char ch1 = s.charAt(i);
+//                char ch2 = t.charAt(i);
+//
+//                if(mp1.containsKey(ch1) == true)
+//                {
+//                    if(mp1.get(ch1) != ch2)
+//                    {
+//                        return false;
+//                    }
+//                }
+//                else
+//                {
+//                    if((mp2.containsKey(ch2) == true))
+//                    {
+//                        return false;
+//                    }
+//                    else
+//                    {
+//                        mp1.put(ch1 , ch2);
+//                        mp2.put(ch2 , true);
+//                    }
+//                }
+//
+//            }
+//            return true;
+//        }
+//    }
 
 }
