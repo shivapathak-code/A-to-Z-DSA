@@ -167,5 +167,21 @@ public class string {
 //            return true;
 //        }
 //    }
+public static void main(String[] args) {
+    String s = "hello";
+
+    System.out.println(reverseString(0, s));
+}
+
+    public static StringBuilder reverseString(int i, String s) {
+        if (i >= s.length()) {
+            return new StringBuilder();
+        }
+
+        StringBuilder rev = reverseString(i + 1, s);
+        rev.append(s.charAt(i));
+
+        return rev;
+    }
 
 }
