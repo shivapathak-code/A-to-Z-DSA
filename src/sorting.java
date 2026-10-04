@@ -117,4 +117,32 @@ public class sorting {
 //            return nums;
 //        }
 //    }
+
+    // recusive insertion sort;
+
+//    class Solution {
+//        public void recusiveinsertion(int[] arr , int i)
+//        {
+//            if(i >= arr.length)
+//            {
+//                return;
+//            }
+//            int key = arr[i];
+//            int j = i - 1;
+//
+//            while(j >= 0 && arr[j] > key)
+//            {
+//                arr[j+1] = arr[j];
+//                j = j - 1;
+//            }
+//
+//            arr[j+1] = key;
+//            recusiveinsertion(arr , i+1);
+//        }
+//        public int[] insertionSort(int[] nums) {
+//            int i = 1;
+//            recusiveinsertion(nums , i);
+//            return nums;
+//        }
+//    }
 }
