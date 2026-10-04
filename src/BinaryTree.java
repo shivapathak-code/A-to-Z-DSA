@@ -14,4 +14,22 @@ public class BinaryTree {
             return list;
         }
     }
+
+    class Solution {
+        public List<Integer> postorder(TreeNode root) {
+            List<Integer> list = new ArrayList<>();
+            if(root == null)
+            {
+                return list;
+            }
+
+            list.addAll(postorder(root.left));
+
+            list.addAll(postorder(root.right));
+            list.add(root.data);
+
+            return list;
+
+        }
+    }
 }
