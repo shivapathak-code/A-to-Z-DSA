@@ -32,4 +32,21 @@ public class BinaryTree {
 
         }
     }
+
+    class Solution {
+        public List<Integer> inorder(TreeNode root) {
+            List<Integer> list = new ArrayList<>();
+            if(root == null)
+            {
+                return list;
+            }
+
+            list.addAll(inorder(root.left));
+            list.add(root.data);
+            list.addAll(inorder(root.right));
+
+            return list;
+
+        }
+    }
 }
