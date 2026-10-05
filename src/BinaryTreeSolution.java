@@ -23,7 +23,28 @@ public class BinaryTreeSolution {
 
              return Math.max(lh , rh)+1;
          }
+    public static int countnodes(Node root)
+    {
+        if(root == null)
+        {
+            return 0;
+        }
+        int leftcount = countnodes(root.left);
+        int rightcount = countnodes(root.right);
 
+        return leftcount+rightcount+1;
+    }
+    public static int sum(Node root)
+    {
+        if(root == null)
+        {
+            return 0;
+        }
+        int lsum = sum(root.left);
+        int rsum = sum(root.right);
+
+        return lsum+rsum+root.data;
+    }
          public static void main(String[] args)
          {
              Node root = new Node(1);
@@ -34,7 +55,9 @@ public class BinaryTreeSolution {
              root.right.right = new Node(6);
              root.right.left = new Node(7);
 
-             System.out.println(heigthoftree(root));
+            // System.out.println(heigthoftree(root));
+            // System.out.println(countnodes(root));
+             System.out.println(sum(root));
 
 
 
