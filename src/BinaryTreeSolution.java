@@ -45,6 +45,20 @@ public class BinaryTreeSolution {
 
         return lsum+rsum+root.data;
     }
+    public static int diameter(Node root) // time consume o(n*n)
+    {
+        if(root == null)
+        {
+            return 0;
+        }
+        int leftdia = diameter(root.left);
+        int leftheight = heigthoftree(root.left);
+        int rightdia = diameter(root.right);
+        int rightheight = heigthoftree(root.right);
+
+        int selfdia = leftheight+rightheight+1;
+        return Math.max(selfdia , Math.max(leftdia , rightdia));
+    }
          public static void main(String[] args)
          {
              Node root = new Node(1);
@@ -57,7 +71,10 @@ public class BinaryTreeSolution {
 
             // System.out.println(heigthoftree(root));
             // System.out.println(countnodes(root));
-             System.out.println(sum(root));
+             //System.out.println(sum(root));
+             System.out.println(diameter(root));
+
+
 
 
 
