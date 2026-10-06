@@ -82,6 +82,20 @@ public class BinaryTreeSolution {
         return new info(diam , ht);
 
     }
+    public static void klevel(Node root  , int level , int k)
+    {
+        if(root == null)
+        {
+            return;
+        }
+        if(root.data == k)
+        {
+            System.out.print(root.data+ " ");
+            return;
+        }
+        klevel(root.left , level+1 , k);
+        klevel(root.right , level+1 ,k );
+    }
          public static void main(String[] args)
          {
              Node root = new Node(1);
@@ -96,9 +110,11 @@ public class BinaryTreeSolution {
             // System.out.println(countnodes(root));
              //System.out.println(sum(root));
             //System.out.println(diameter(root));
-             System.out.println(Diameter(root).diam);
-             System.out.println(Diameter(root).ht);
+             //System.out.println(Diameter(root).diam);
+             //System.out.println(Diameter(root).ht);
 
+             int k = 2;
+             klevel(root , 1 ,k);
 
 
 
