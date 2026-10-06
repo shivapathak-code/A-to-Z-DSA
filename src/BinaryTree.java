@@ -156,4 +156,37 @@
 //            return Math.max(lh , rh)+1;
 //        }
 //    }
+
+
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int data;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int val) { data = val; left = null, right = null }
+ * }
+ **/
+
+class Solution {
+    public int maxPathSum(TreeNode root) {
+        int maxvalue[] = new int[1];
+        maxvalue[0] = Integer.MIN_VALUE;
+        maxPathDown(root , maxvalue);
+        return maxvalue[0];
+    }
+    private int maxPathDown(TreeNode node , int maxvalue[])
+    {
+        if(node == null)
+        {
+            return 0;
+        }
+        int leftsum = Math.max(0 , maxPathDown(node.left , maxvalue));
+        int rightsum = Math.max(0 , maxPathDown(node.right , maxvalue));
+        maxvalue[0] = Math.max(maxvalue[0] , leftsum+rightsum+node.data);
+
+        return Math.max(leftsum , rightsum) + node.data;
+    }
+}
 //}
