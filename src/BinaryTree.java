@@ -216,4 +216,44 @@
 //                && isSymmetricHelp(left.right , right.left);
 //    }
 //}
+
+// class TreeNode {
+//     int val;
+//     TreeNode left, right;
+//     TreeNode(int x) { val = x; }
+// }
+
+class Solution {
+    boolean checkChildrenSum(TreeNode root) {
+        // yahan to root node ko check kerte jao bas;
+        if (root == null) {
+            return true;
+        }
+
+        // yahan leaf node kerte jana bas or neeche kuch bi nhi to return true;
+        if (root.left == null && root.right == null) {
+            return true;
+        }
+        // that is follow the condition
+        //if(root,left != null)
+        // {
+        //   left =  root.left.data;
+        // }
+        // else
+        // {
+        //     left = 0;
+        // }
+        int left = (root.left != null) ? root.left.val : 0;
+        int right = (root.right != null) ? root.right.val : 0;
+
+        if (root.val != left + right) {
+            return false;
+        }
+// yahan ham baar baar check kerte jate pure tree ko;
+        return checkChildrenSum(root.left)
+                && checkChildrenSum(root.right);
+    }
+}
+
+
 ////}
