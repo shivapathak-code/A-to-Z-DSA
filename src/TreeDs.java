@@ -1,7 +1,7 @@
 import java.util.*;
 public class TreeDs {
 
-    class TreeNode<E>{
+    static class TreeNode<E>{
         E data;
         TreeNode left;
         TreeNode right;
@@ -15,9 +15,16 @@ public class TreeDs {
     }
     public static void main(String[] args)
     {
-
+        TreeNode root = new TreeNode(1);
+             root.left = new TreeNode(2);
+             root.right = new TreeNode(3);
+             root.left.left = new TreeNode(4);
+             root.left.right = new TreeNode(5);
+             root.right.right = new TreeNode(6);
+             root.right.left = new TreeNode(7);
+             System.out.print(BFS(root));
     }
-    public ArrayList<Integer> BFS(TreeNode<Integer> root)
+    public static ArrayList<Integer> BFS(TreeNode<Integer> root)
     {
         ArrayList<Integer> ans = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
