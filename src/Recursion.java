@@ -2,6 +2,7 @@ public class Recursion {
     public static void main(String[] args)
     {
 
+        System.out.println(climbStraire(3));
         //printHello(6);
         //print1T010(10);
         //print10T01(10);
@@ -52,9 +53,9 @@ public class Recursion {
 //        {
 //            System.out.print(arr[i] + " ");
 //        }
-        int n = 123;
-       int ans =  adddigit(n);
-       System.out.println(ans);
+//        int n = 123;
+//       int ans =  adddigit(n);
+//       System.out.println(ans);
 
 
 
@@ -307,16 +308,29 @@ public class Recursion {
 //            arr[n - i - 1] = temp;
 //            return arrayReverse(arr , mid , i+1);
 //    }
-    public static int adddigit(int n)
+//    public static int adddigit(int n)
+//    {
+//        int sum = 0;
+//        if(n == 0)
+//        {
+//            return sum;
+//        }
+//        int d = n%10;
+//        sum = sum+d;
+//        return adddigit(n/10);
+//    }
+    public static int climbStraire(int n)
     {
-        int sum = 0;
-        if(n == 0)
+        if(n == 1)
         {
-            return sum;
+            return 1;
         }
-        int d = n%10;
-        sum = sum+d;
-        return adddigit(n/10);
+        if(n == 2)
+        {
+            return 2;
+        }
+        int ans = climbStraire(n-1)+climbStraire(n-2);
+        return ans;
     }
 
 }
