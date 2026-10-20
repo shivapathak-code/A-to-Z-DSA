@@ -319,19 +319,57 @@ public class Recursion {
 //        sum = sum+d;
 //        return adddigit(n/10);
 //    }
-    public static int climbStraire(int n)
-    {
-        if(n == 1)
-        {
-            return 1;
-        }
-        if(n == 2)
-        {
-            return 2;
-        }
-        int ans = climbStraire(n-1)+climbStraire(n-2);
-        return ans;
-    }
+//    public static int climbStraire(int n)
+//    {
+//        if(n == 1)
+//        {
+//            return 1;
+//        }
+//        if(n == 2)
+//        {
+//            return 2;
+//        }
+//        int ans = climbStraire(n-1)+climbStraire(n-2);
+//        return ans;
+//    }
+
+    // binary serach using recursion;
+
+//    class Solution {
+//        static int solve(int[] arr , int target , int s,int e)
+//        {
+//            // base case
+//            if(s > e)
+//            {
+//                return -1;
+//            }
+//
+//            // ek case ham solve kerte hain
+//            int mid = s+(e-s)/2;
+//
+//            if(arr[mid] == target)
+//            {
+//                return mid;
+//            }
+//            else if(arr[mid] > target)
+//            {
+//                e = mid -1;
+//            }
+//            else{
+//                s = mid+1;
+//            }
+//
+//            // ab recusive call marni hain bas;
+//            return solve(arr , target ,s , e);
+//        }
+//        public int search(int[] nums, int target) {
+//
+//            int s = 0;
+//            int e = nums.length -1;
+//            return solve(nums , target , s ,e);
+//
+//        }
+//    }
 
 }
 
