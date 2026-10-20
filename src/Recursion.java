@@ -371,5 +371,36 @@ public class Recursion {
 //        }
 //    }
 
+    // get all subsequence;
+//    class Solution {
+//        static void getAllSubsequence(String s ,int index ,StringBuilder output , List<String> ans)
+//        {
+//            if(index >= s.length())
+//            {
+//                String subsequence = output.toString();
+//                ans.add(subsequence);
+//                return;
+//            }
+//            //include
+//            char ch = s.charAt(index);
+//            output.append(ch);
+//            getAllSubsequence(s , index+1,output , ans);
+//
+//            //exclude
+//            output.deleteCharAt(output.length()-1);
+//            getAllSubsequence(s , index+1,output , ans);
+//
+//        }
+//        public List<String> powerSet(String s) {
+//            List<String> ans = new ArrayList<>();
+//            StringBuilder output = new StringBuilder();
+//            int index = 0;
+//            getAllSubsequence(s , index , output , ans);
+//            Collections.sort(ans);
+//            return ans;
+//
+//        }
+//    }
+
 }
 
