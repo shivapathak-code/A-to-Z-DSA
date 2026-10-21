@@ -402,5 +402,41 @@ public class Recursion {
 //        }
 //    }
 
+// coin change 2 ;
+//    class Solution {
+//
+//        static int solve(int coins[] ,int sum , int index){
+//            if(sum == 0)
+//            {
+//                return 1;
+//            }
+//            if(sum < 0)
+//            {
+//                return 0;
+//            }
+//            if(index >= coins.length)
+//            {
+//                return 0;
+//            }
+//
+//            // ab ham yahan do call merte hain pahle
+//            // include ki call
+//            // than uske baad exclude ki call marte
+//            // yahan hain hamri include ki call
+//
+//            int includekicall = solve(coins , sum-coins[index] , index);
+//            // ab yahn exclude ki call marte hain
+//            int excludekicall = solve(coins , sum , index+1);
+//
+//            int finalans = includekicall+excludekicall;
+//            return finalans;
+//        }
+//        public int count(int coins[], int sum) {
+//
+//            int index = 0;
+//            int ans = solve( coins, sum , index);
+//            return ans;
+//        }
+//    }
 }
 
