@@ -402,7 +402,8 @@ public class Recursion {
 //        }
 //    }
 
-// coin change 2 ;
+// coin change 2 ; that is the recusion solution but in dp we have to completed the optimizaion technique
+
 //    class Solution {
 //
 //        static int solve(int coins[] ,int sum , int index){
