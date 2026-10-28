@@ -2,7 +2,7 @@ public class Recursion {
     public static void main(String[] args)
     {
 
-        System.out.println(climbStraire(3));
+        //System.out.println(climbStraire(3));
         //printHello(6);
         //print1T010(10);
         //print10T01(10);
@@ -439,5 +439,6 @@ public class Recursion {
 //            return ans;
 //        }
 //    }
+
 }
 
