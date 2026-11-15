@@ -1,12 +1,15 @@
+package String;// main string
+
+
 public class StringTest {
     public static void main(String[] args)
     {
         //String in java;
         String str1 = "Shiva"; // that is create in SCP menas String constant pool;
-        String str2 = "Shiva";
+        String str2 = "Shiva";// that is create in SCP menas String constant pool;
 
         String str3 = new String("om");// that is create in Heap memory;
-        String str4 = new String("om");
+        String str4 = new String("om");//that is create in Heap memory;
 
 //        System.out.println(str1);
 //        System.out.println(str2);
