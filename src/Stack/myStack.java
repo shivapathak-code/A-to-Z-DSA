@@ -1,5 +1,5 @@
 package Stack;
-
+// implemetation by Array;
 public class myStack {
     private int[] arr;
     private int capacity;
