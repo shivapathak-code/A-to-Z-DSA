@@ -6,35 +6,31 @@ import java.util.Deque;
 public class Countreversal {
     public static int countReversal(String s)
     {
+        // optimise approach use without stack use only varilables;
         if(s.length()%2 == 1)
         {
             return -1;
         }
-        Deque<Character> st = new ArrayDeque<>();
+        int open  = 0;
+        int close = 0;
+
         for(char ch : s.toCharArray())
         {
-            if(ch == '}'&& !st.isEmpty() && st.peek() == '{')
+            if(ch == '}' && open > 0)
             {
-                st.pop();
+                open--;
             }
             else
             {
-                st.push(ch);
+                if(ch == '{')
+                {
+                    open++;
+                }
+                else if(ch == '}')
+                {
+                    close++;
+                }
             }
-        }
-        int open = 0;
-        int close = 0;
-        while(!st.isEmpty())
-        {
-            if(st.peek() == '{')
-            {
-                open++;
-            }
-            else
-            {
-                close++;
-            }
-            st.pop();
         }
         if(open %2 == 0)
         {
@@ -44,6 +40,65 @@ public class Countreversal {
         {
             return (close -1)/2+2+(open-1)/2;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        if(s.length()%2 == 1)
+//        {
+//            return -1;
+//        }
+//        Deque<Character> st = new ArrayDeque<>();
+//        for(char ch : s.toCharArray())
+//        {
+//            if(ch == '}'&& !st.isEmpty() && st.peek() == '{')
+//            {
+//                st.pop();
+//            }
+//            else
+//            {
+//                st.push(ch);
+//            }
+//        }
+//        int open = 0;
+//        int close = 0;
+//        while(!st.isEmpty())
+//        {
+//            if(st.peek() == '{')
+//            {
+//                open++;
+//            }
+//            else
+//            {
+//                close++;
+//            }
+//            st.pop();
+//        }
+//        if(open %2 == 0)
+//        {
+//            return (open/2)+(close/2);
+//        }
+//        else
+//        {
+//            return (close -1)/2+2+(open-1)/2;
+//        }
     }
     public static void main(String[] args)
     {
