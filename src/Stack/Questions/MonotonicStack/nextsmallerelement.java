@@ -1,13 +1,12 @@
-package Stack.Questions;
+package Stack.Questions.MonotonicStack;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
 
-public class previousSmaller {
+public class nextsmallerelement {
+    static ArrayList<Integer> nextSmallerEle(int[] arr) {
 
-    public static ArrayList<Integer> prevSmaller(int[] arr) {
-        // code here
         ArrayList<Integer> result = new ArrayList<>();
 
         for(int i=0; i<arr.length;i++)
@@ -18,7 +17,7 @@ public class previousSmaller {
         Deque<Integer> st = new ArrayDeque<>();
         // move right to left;
         int n = arr.length;
-        for(int i = 0; i<= n-1;i++)
+        for(int i = n-1; i>= 0;i--)
         {
 
             int curr = arr[i];
